@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>btjawa&#39;s Blog</title>
+    <link>https://blog.btjawa.top/</link>
+    <description>Recent content on btjawa&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>btjawa</copyright>
+    <lastBuildDate>Tue, 19 Dec 2023 00:42:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.btjawa.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://blog.btjawa.top/about/</link>
+      <pubDate>Wed, 20 Dec 2023 16:03:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/about/</guid>
+      <description>&amp;ldquo;btjawa&amp;rsquo;s simple blog.&amp;rdquo;&#xA;Still refactoring.</description>
+    </item>
+    <item>
+      <title>Markdown 示例文章</title>
+      <link>https://blog.btjawa.top/posts/markdown-%E7%A4%BA%E4%BE%8B%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Tue, 19 Dec 2023 00:42:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/posts/markdown-%E7%A4%BA%E4%BE%8B%E6%96%87%E7%AB%A0/</guid>
+      <description>标题 1 这是一段普通文本。接下来是一个无序列表： 列表项 1 列表项 2 子列表项 2.1 子列表项 2.2 标题 2 接下来是一个有序列表： 第一项 第二项 子项 2.1 子项 2.2 标题 3 以下是几个代码块： 1 2 def hello_world(): print(&amp;#34;Hello, world!&amp;#34;) 1 2 3 4 5 6 7 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main() { cout &amp;lt;&amp;lt; &amp;#34;Hello, world!&amp;#34;; return 0; } 1 console.log(&amp;#34;Hello, world!&amp;#34;); 标题 4 接下来是一个引用： 这是一个引用文本。 标题 5 这里是一个链</description>
+    </item>
+    <item>
+      <title>Search</title>
+      <link>https://blog.btjawa.top/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://blog.btjawa.top/search/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
