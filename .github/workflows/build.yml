@@ -3,7 +3,6 @@ name: Build Hugo Site
 on:
   push:
     branches:
-      - main
       - master
 
 jobs:
@@ -12,6 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
