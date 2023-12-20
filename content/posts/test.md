@@ -1,5 +1,6 @@
 ---
 title: Markdown 示例文章
+url: /posts/test/
 date: "2023-12-19 00:42:00+08:00"
 author: btjawa
 description: 这是一篇 Markdown 示例文章。其中包含多种 Markdown 元素，例如代码块、引用、列表、表格等常用元素，适合用于 CSS 等渲染测试。
