@@ -1,0 +1,71 @@
+baseURL: https://blog.btjawa.top
+languageCode: zh-cn
+title: btjawa's Blog
+theme: hugo-PaperMod
+
+enableInlineShortcodes: true
+enableEmoji: true
+
+enableRobotsTXT: true
+hasCJKLanguage: true
+
+buildDraft: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: 
+
+Copyright: btjawa
+paginate: 15
+summaryLength: 140
+
+minify:
+  disableXML: true
+
+permalinks:
+  posts: "posts/:title/"
+
+enableGitInfo: false
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: about
+      weight: 1
+    - identifier: posts
+      name: Posts
+      url: posts
+      weight: 2
+    - identifier: search
+      name: Search
+      url: search
+      weight: 3
+    - identifier: primary
+      name: Primary
+      url: https://btjawa.top
+      weight: 4
+
+params:
+  description: "btjawa's simple blog."
+  author: "btjawa"
+  keywords: ["白弹汲", "btjawa", "btj", "blog", "hugo", "papermod"]
+  ShowPageNums: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowReadingTime: true
+  ShowToc: true
+  paginate: 5
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        codeFences: true  
+        guessSyntax: true
+        lineNos: true
+        noClasses: false
+        style: monokai
