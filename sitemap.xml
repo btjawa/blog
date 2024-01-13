@@ -2,14 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.btjawa.top/about/</loc>
-    <lastmod>2023-12-20T16:03:00+08:00</lastmod>
+    <loc>https://blog.btjawa.top/tags/bilibili/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/tags/bilitools/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/categories/bilitools/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/posts/bilitools/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
   </url><url>
     <loc>https://blog.btjawa.top/</loc>
-    <lastmod>2023-12-19T00:42:00+08:00</lastmod>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
   </url><url>
     <loc>https://blog.btjawa.top/categories/</loc>
-    <lastmod>2023-12-19T00:42:00+08:00</lastmod>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/posts/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/tags/rust/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/categories/rust/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/tags/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/tags/tauri/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/categories/tauri/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/tags/tool/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2024-01-12T22:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.btjawa.top/about/</loc>
+    <lastmod>2023-12-20T16:03:00+08:00</lastmod>
   </url><url>
     <loc>https://blog.btjawa.top/tags/markdown/</loc>
     <lastmod>2023-12-19T00:42:00+08:00</lastmod>
@@ -18,12 +54,6 @@
     <lastmod>2023-12-19T00:42:00+08:00</lastmod>
   </url><url>
     <loc>https://blog.btjawa.top/posts/test/</loc>
-    <lastmod>2023-12-19T00:42:00+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.btjawa.top/posts/</loc>
-    <lastmod>2023-12-19T00:42:00+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.btjawa.top/tags/</loc>
     <lastmod>2023-12-19T00:42:00+08:00</lastmod>
   </url><url>
     <loc>https://blog.btjawa.top/tags/%E5%85%83%E7%B4%A0/</loc>

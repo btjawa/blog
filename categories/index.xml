@@ -7,8 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>btjawa</copyright>
-    <lastBuildDate>Tue, 19 Dec 2023 00:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jan 2024 22:55:00 +0800</lastBuildDate>
     <atom:link href="https://blog.btjawa.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BiliTools</title>
+      <link>https://blog.btjawa.top/categories/bilitools/</link>
+      <pubDate>Fri, 12 Jan 2024 22:55:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/categories/bilitools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://blog.btjawa.top/categories/rust/</link>
+      <pubDate>Fri, 12 Jan 2024 22:55:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/categories/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tauri</title>
+      <link>https://blog.btjawa.top/categories/tauri/</link>
+      <pubDate>Fri, 12 Jan 2024 22:55:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/categories/tauri/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Markdown</title>
       <link>https://blog.btjawa.top/categories/markdown/</link>

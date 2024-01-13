@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>btjawa</copyright>
-    <lastBuildDate>Tue, 19 Dec 2023 00:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jan 2024 22:55:00 +0800</lastBuildDate>
     <atom:link href="https://blog.btjawa.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BiliTools</title>
+      <link>https://blog.btjawa.top/posts/bilitools/</link>
+      <pubDate>Fri, 12 Jan 2024 22:55:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/posts/bilitools/</guid>
+      <description>bilibili工具箱，视频/番剧&#43;伴音/音乐下载，三种登录方式，仅用作学习用途。</description>
+    </item>
     <item>
       <title>About</title>
       <link>https://blog.btjawa.top/about/</link>

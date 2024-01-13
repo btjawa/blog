@@ -7,8 +7,50 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>btjawa</copyright>
-    <lastBuildDate>Tue, 19 Dec 2023 00:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jan 2024 22:55:00 +0800</lastBuildDate>
     <atom:link href="https://blog.btjawa.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bilibili</title>
+      <link>https://blog.btjawa.top/tags/bilibili/</link>
+      <pubDate>Fri, 12 Jan 2024 22:55:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/tags/bilibili/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>bilitools</title>
+      <link>https://blog.btjawa.top/tags/bilitools/</link>
+      <pubDate>Fri, 12 Jan 2024 22:55:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/tags/bilitools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>rust</title>
+      <link>https://blog.btjawa.top/tags/rust/</link>
+      <pubDate>Fri, 12 Jan 2024 22:55:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>tauri</title>
+      <link>https://blog.btjawa.top/tags/tauri/</link>
+      <pubDate>Fri, 12 Jan 2024 22:55:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/tags/tauri/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>tool</title>
+      <link>https://blog.btjawa.top/tags/tool/</link>
+      <pubDate>Fri, 12 Jan 2024 22:55:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/tags/tool/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>工具</title>
+      <link>https://blog.btjawa.top/tags/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 12 Jan 2024 22:55:00 +0800</pubDate>
+      <guid>https://blog.btjawa.top/tags/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
     <item>
       <title>markdown</title>
       <link>https://blog.btjawa.top/tags/markdown/</link>
