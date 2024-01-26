@@ -31,6 +31,8 @@ tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
     - 互动视频支持：`回溯 / 控制剧情走向 + 下载每一个剧情对应的资源`
 - 音乐下载 - `AU`
     - 音质最高支持：`320K + 无损SQ FLAC`
+- 弹幕获取 - `实时弹幕(Json) / 历史弹幕(Json)`
+- 视频AI总结
 - 三种登录方式 + 自动刷新登录状态
     - 扫码登录
     - 密码登录
@@ -44,12 +46,12 @@ tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
 
 # 数据结构
 
-## DanmakuElem
-
 <p>
 <a href="https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/grpc_api/bilibili/community/service/dm/v1/dm.proto" target="_blank">
 <i class="fa-brands fa-github"></i>&nbsp;来源 - dm.proto</a>
 </p>
+
+## DanmakuElem
 
 | 字段名     | 类型           | 描述 |
 |------------|----------------|------|
@@ -71,5 +73,17 @@ tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
 
 # Q&A
 
-1. 为什么应用内登录后, B站后台显示 `设备/平台` 为 `Chrome浏览器` ?
-     - 应用会使用User-Agents `Chrome/120.0.0.0 ...` , 即模拟Chrome浏览器进行请求, 风控率更低
+1. 为什么应用内登录后，B站后台显示 `设备/平台` 为 `Chrome浏览器` ?
+     - 应用会使用User-Agents `Chrome/120.0.0.0 ...` ，即模拟Chrome浏览器进行请求，风控率更低。
+
+2. 为什么下载资源的文件名会有一堆 `_` 而不是原视频名？
+     - 应用会将所有对于 `Windows 文件系统` 非法的字符替换为 `_` 下划线字符。
+  
+# 目前已知BUG
+
+1. 在批量下载时长较长的视频时（例如番剧），有一定概率出现 `aria2c RPC` 接口未响应的情况；
+目前尚未排查出出现原因，可临时通过小批量添加长视频下载任务来解决；
+在 `%TEMP%` 缓存尚未被清除的情况下，重启应用仍可保留尚未下载完成视频的进度。
+
+2. 在更新队列时，有一定概率出现部分视频下载/合并进度无法更新的情况，表现为进度栏提示 `等待同步`；
+计划在未来重写进度以及队列更新的逻辑。

@@ -41,8 +41,8 @@ menu:
       name: Search
       url: search
       weight: 3
-    - identifier: primary
-      name: Primary
+    - identifier: home
+      name: Home
       url: https://btjawa.top
       weight: 4
 
