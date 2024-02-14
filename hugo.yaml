@@ -1,7 +1,7 @@
 baseURL: https://blog.btjawa.top
 languageCode: zh-cn
 title: btjawa's Blog
-theme: hugo-PaperMod
+theme: ["hugo-notice", "hugo-PaperMod"]
 
 enableInlineShortcodes: true
 enableEmoji: true
