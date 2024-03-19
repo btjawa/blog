@@ -3,7 +3,7 @@ name: Build Hugo Site
 on:
   push:
     branches:
-      - master
+      - old
 
 jobs:
   build:
