@@ -1,0 +1,3 @@
+[submodule "hexo-theme-volantis"]
+	path = themes/hexo-theme-volantis
+	url = https://github.com/btjawa/hexo-theme-volantis.git
