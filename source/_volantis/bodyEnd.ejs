@@ -21,23 +21,7 @@ volantis.rightmenu.handle(() => {
   next.prop('title', articleNext || null);
 }, 'prevNext', false);
 
-// 监听 color-schme 变化并修改背景图
-function updateBgImage() {
-  const colorScheme = $('html').attr('color-scheme');
-  $('body').css('backgroundImage', `url("/img/email-pattern-${colorScheme || "dark"}.png")`);
-}
-
-const observer = new MutationObserver((mutationsList, observer) => {
-  for (const mutation of mutationsList) {
-    if (mutation.type === 'attributes' && mutation.attributeName === 'color-scheme') {
-      updateBgImage();
-    }
-  }
-});
-observer.observe(document.documentElement, { attributes: true, childList: false, subtree: false });
-
 $(document).ready(function() {
-  updateBgImage();
   $('h1, h2, h3, h4, h5, h6').each(function () {
     const link = $(this).find('.headerlink');
     if (link.length > 0) {

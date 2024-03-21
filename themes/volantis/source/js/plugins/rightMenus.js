@@ -174,6 +174,7 @@ RightMenus.fun = (() => {
       let screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
       let screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
 
+      _rightMenuWrapper.style.animation = 'rightmenu-in .2s cubic-bezier(.23,0,0,1.32)';
       _rightMenuWrapper.style.display = 'block';
       fn.menuControl(event);
 

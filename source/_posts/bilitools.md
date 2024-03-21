@@ -17,7 +17,7 @@ tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
 
 基于 [Tauri](https://github.com/tauri-apps/tauri) & [Rust](https://github.com/rust-lang/rust) 实现的 bilibili 第三方轻量工具箱；项目仅作学习用途。
 
-## 目前已实现
+## 功能
 
 - 获取大会员/付费资源
 - 风控验证 - `WBI / _uuid / buvid3/4 / bili_ticket / 极验行为验证`
@@ -88,12 +88,13 @@ tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
 
 `最大并发下载数` - 最大并发下载数决定可以同时下载多少资源。更改将在重启应用或重启aria2c后生效。
 
-{% admonition danger 警告 %}
+{% note warning radiation ::
 
 以下操作均会使 **下载中、未下载完成的资源进度丢失，需要重新下载。**
+<br>
 已下载完成的资源不受影响。仅建议在 **所有资源下载完成时** 操作。
 
-{% endadmonition %}
+ %}
 
 `临时文件` - 清理临时文件不会影响**正常使用**。
 
