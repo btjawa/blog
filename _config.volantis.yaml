@@ -129,12 +129,11 @@ scroll_smooth: true
 ############################### Navigation Bar ############################### > start
 # 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
 navbar:
-  visiable: always # always, auto
+  visiable: auto # always, auto
   logo: # choose [img] or [icon + title]
-    # img: volantis-static/media/org.volantis/blog/Logo-NavBar@3x.png # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
-    img:
+    img: volantis-static/media/org.volantis/blog/Logo-NavBar@3x.png # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
     icon: 
-    title: btjawa's blog
+    title:
   menu:
     - name: 博客
       icon: fa-solid fa-blog
@@ -607,7 +606,7 @@ sidebar:
       header:
         icon: fa-solid fa-list
         title: 本文目录
-      list_number: false
+      list_number: true
       min_depth: 2
       max_depth: 5
     # ---------------------------------------
@@ -1183,9 +1182,9 @@ color_scheme:
   # 通用颜色
   common:
     # 主题色
-    theme: '#5E72E4'
+    theme: '#1E88E5'
     # 链接色
-    link: '#5E72E4'
+    link: '#1E88E5'
     # 按钮色
     button: '#3F51B5'
     # 鼠标放到交互元素上时的色
@@ -1214,7 +1213,7 @@ color_scheme:
     # 代码块高亮时的背景色
     codeblock: '#FFF7EA'
     # 行内代码颜色
-    inlinecode: '#c74f00'
+    inlinecode: '#444'
 
     # 文章部分
     h1: '#3a3a3a'
@@ -1252,11 +1251,11 @@ color_scheme:
     text: '#eeeeeede'
 
     # 区块和代码块背景色       # Dark Grey 4
-    block: '#434343'
+    block: '#37383e'
     # 代码块高亮时的背景色     # Dark Grey 2
     codeblock: '#1f1f1f'
     # 行内代码颜色
-    inlinecode: '#D56D28'
+    inlinecode: '#c4c4c5'
 
     # 文章部分 高强度文本的不透明度应为87％ 中等重点文字适用于60％
     h1: '#FFFFFFde'            #  Dark Grey 8
@@ -1317,7 +1316,7 @@ custom_css:
     h3: 24px # Spacing above H3 (only px unit)
     h4: 16px # Spacing above H4 (only px unit)
     p: 1em # Paragraph spacing between paragraphs
-    line_height: 1.6 # normal, 1.5, 1.75, 2 ...
+    line_height: 1.75 # normal, 1.5, 1.75, 2 ...
   border_radius:
     card: 8px
     codeblock: 4px
@@ -1337,23 +1336,23 @@ custom_css:
     footnote: .78125rem
   fontfamily:
     logofont:
-      fontfamily: 'Comfortaa, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
+      fontfamily: 'Comfortaa, HarmonyOS_Sans_SC_Regular, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       # name: 'VarelaRound'
       # url: volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf
       weight: normal
       style: normal
     bodyfont:
-      fontfamily: '"PingFang SC", "Microsoft YaHei", Helvetica, Arial'
+      fontfamily: 'Comfortaa, HarmonyOS_Sans_SC_Regular, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       # name: 'UbuntuMono'
       # url: volantis-static/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
       weight: normal
       style: normal
     codefont:
-      fontfamily: 'Menlo, UbuntuMono, Monaco'
+      fontfamily: '"Source Code Pro", "PingFang SC", "Microsoft YaHei", Consolas, Monaco, Helvetica, Arial'
       # name: 'Monaco'
       # url: volantis-static/media/fonts/Monaco/Monaco.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf
-      # weight: normal
-      # style: normal
+      weight: normal
+      style: normal
 ############################### Custom css ############################### > end
 
 ############################### SEO ############################### > start

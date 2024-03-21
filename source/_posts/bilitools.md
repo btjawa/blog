@@ -12,11 +12,9 @@ tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
 
 <a href="https://github.com/btjawa/bilitools" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;Github Repo</a>
 
-# 介绍
+## 介绍
 
 基于 [Tauri](https://github.com/tauri-apps/tauri) & [Rust](https://github.com/rust-lang/rust) 实现的 bilibili 第三方轻量工具箱；项目仅作学习用途。
-
-# 功能
 
 ## 目前已实现
 
@@ -38,13 +36,13 @@ tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
     - 密码登录
     - 短信登录: 多国家区号支持
 
-# 更新
+## 更新
 
 应用将在每次启动时自动检查并更新
 
 手动更新可移步 [Releases](https://github.com/btjawa/BiliTools/releases/latest)
 
-# 感谢
+## 感谢
 
 [哔哩哔哩-API收集整理](https://github.com/SocialSisterYi/bilibili-API-collect)
 
@@ -52,14 +50,12 @@ tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
 
 [aria2](https://github.com/aria2/aria2)
 
-# 数据结构
+## 数据结构
 
-<p>
 <a href="https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/grpc_api/bilibili/community/service/dm/v1/dm.proto" target="_blank">
 <i class="fa-brands fa-github"></i>&nbsp;来源 - dm.proto</a>
-</p>
 
-## DanmakuElem
+### DanmakuElem
 
 | 字段名     | 类型           | 描述 |
 |------------|----------------|------|
@@ -79,24 +75,17 @@ tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
 | `animation`| `string`       | 动画 |
 | `colorful` | `DmColorfulType` | 大会员专属颜色 |
 
-# 文档
+## 文档
 
-<p>
-以下内容基于
-<a href="https://github.com/btjawa/BiliTools/releases/tag/v1.1.0" target="_blank">
-<i class="fa-brands fa-github"></i>&nbsp;BiliTools v1.1.0</a>
-撰写。
-</p>
+以下内容基于 <a href="https://github.com/btjawa/BiliTools/releases/tag/v1.1.0" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;BiliTools v1.1.0</a> 撰写。
 
-## 设置
+### 设置项
 
 `存储目录` - 下载完成的资源将会存放至存储目录。
 
 `临时文件目录` - 下载中、未下载完成的资源将会存放至临时文件目录。一般情况下**不建议**修改。
 
 `最大并发下载数` - 最大并发下载数决定可以同时下载多少资源。更改将在重启应用或重启aria2c后生效。
-
-### 危险操作
 
 {% admonition danger 警告 %}
 
@@ -114,14 +103,17 @@ tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
 
 ## Q&A
 
-1. 为什么应用内登录后，B站后台显示 `设备/平台` 为 `Chrome浏览器` ?
-     - 应用会使用User-Agents `Chrome/120.0.0.0 ...` ，即模拟Chrome浏览器进行请求，风控率更低。
+### 为什么应用内登录后，B站后台显示 `设备/平台` 为 `Chrome浏览器` ?
 
-2. 为什么下载资源的文件名会有一堆 `_` 而不是原视频名？
-     - 应用会将所有对于 `Windows 文件系统` 非法的字符替换为 `_` 下划线字符。
+应用会使用User-Agents `Chrome/120.0.0.0 ...` ，即模拟Chrome浏览器进行请求，风控率更低。
 
-3. 我需要通过代理服务器获取资源，如何配置？
-     - 目前应用核心(Tauri Core)并未提供相关网络接口，但在每次 `应用启动` 时，应用默认会尝试使用 `系统代理` 。
+### 为什么下载资源的文件名会有一堆 `_` 而不是原视频名？
+
+应用会将所有对于 `Windows 文件系统` 非法的字符替换为 `_` 下划线字符。
+
+### 我需要通过代理服务器获取资源，如何配置？
+
+目前应用核心(Tauri Core)并未提供相关网络接口，但在每次 `应用启动` 时，应用默认会尝试使用 `系统代理` 。
     若发现未生效的话，可尝试使用代理软件的 `TUN 模式` 。
   
 ## 目前已知BUG

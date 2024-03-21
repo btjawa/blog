@@ -14,7 +14,7 @@ tag: Markdown
 
 # Markdown 示例文章
  
-## 1. 排版
+## 排版
  
 **粗体** *斜体* 
  
@@ -34,7 +34,7 @@ tag: Markdown
  - 项目2
  
  
-## 2. 图片与链接
+## 图片与链接
  
 图片:
 ![灵梦](https://upload.thwiki.cc/0/02/%E5%8D%9A%E4%B8%BD%E7%81%B5%E6%A2%A6%EF%BC%88%E5%84%9A%E6%9C%88%E6%8A%84%EF%BC%89.jpg)
@@ -42,7 +42,7 @@ tag: Markdown
 链接:
 [GitHub](https://github.com)
  
-## 3. 标题
+## 标题
  
 以下是各级标题, 最多支持5级标题
  
@@ -55,7 +55,7 @@ tag: Markdown
 ###### h5
 ```
  
-## 4. 代码
+## 代码
  
 示例:
  
@@ -95,7 +95,7 @@ class Employee:
         Employee.empCount += 1
 ```
  
-# 5. Markdown 扩展
+## Markdown 扩展
  
 Markdown 扩展支持:
  
@@ -107,7 +107,7 @@ Markdown 扩展支持:
 * 时序图与流程图
 * MathJax 公式
  
-## 5.1 表格
+## 表格
  
 Item     | Value
 -------- | ---
@@ -124,7 +124,7 @@ Pipe     | \$1
 | Pipe     | \$1    |  234  |
  
  
-## 5.2 定义型列表
+### 定义型列表
  
 名词 1
 :   定义 1（左侧有一个可见的冒号和四个不可见的空格）
@@ -134,7 +134,7 @@ Pipe     | \$1
  
         代码块（左侧有八个不可见的空格）
  
-## 5.3 Html 标签
+### Html 标签
  
 支持在 Markdown 语法中嵌套 Html 标签，譬如，你可以用 Html 写一个纵跨两行的表格：
  

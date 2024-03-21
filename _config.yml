@@ -122,7 +122,8 @@ import:
     - <link rel="apple-touch-icon" href="https://btjawa.top/img/icon/apple-touch-icon.png">
   # Fonts
     - <link href="https://fonts.googlefonts.cn/css?family=Comfortaa" rel="stylesheet">
-    - <link href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/lxgwwenkai-regular.min.css" rel="stylesheet">
+    - <link href="https://fonts.googlefonts.cn/css?family=Source+Code+Pro" rel="stylesheet">
+    - <link href="/fonts/HarmonyOS_Sans_SC_Regular/font.min.css" rel="stylesheet">
   head_end:
   body_begin:
   body_end:
