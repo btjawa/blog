@@ -2131,7 +2131,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1710994962582),
+    lastupdate: new Date(1711040117705),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2200,6 +2200,15 @@ td {
 	white-space: nowrap;
 }
 
+.headerlink {
+  user-select: none;
+  margin-left: 8px;
+}
+
+.headerlink:hover {
+  color: #9B9C9D !important;
+  text-decoration: underline;
+}
 /*
 https://github.com/pilgrimlyieu/hexo-admonition-lyieu/blob/master/lib/default.css
 Modified by btjawa
@@ -2810,10 +2819,10 @@ p.admonition-title {
 						<h2>2024</h2>
 					
 						<div class='timenode'>
-								<a class="meta" href="/posts/markdown/">
-									<time>03-20</time>
+								<a class="meta" href="/posts/bilitools/">
+									<time>01-12</time>
 									
-										Markdown 示例文章
+										BiliTools
 									
 									
 									
@@ -2825,11 +2834,14 @@ p.admonition-title {
 				
 				
 					
+						
+						<h2>2023</h2>
+					
 						<div class='timenode'>
-								<a class="meta" href="/posts/bilitools/">
-									<time>01-12</time>
+								<a class="meta" href="/posts/markdown/">
+									<time>12-18</time>
 									
-										BiliTools
+										Markdown 示例文章
 									
 									
 									
@@ -3008,7 +3020,7 @@ p.admonition-title {
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/bilitools/"><div class="item"><time>2024-03-21</time><span>Tauri</span></div><span>BiliTools</span></a></li><li><a class="widget-last" href="/posts/markdown/"><div class="item"><time>2024-03-21</time><span>Markdown</span></div><span>Markdown 示例文章</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/bilitools/"><div class="item"><time>2024-03-22</time><span>Tauri</span></div><span>BiliTools</span></a></li><li><a class="widget-last" href="/posts/markdown/"><div class="item"><time>2024-03-22</time><span>Markdown</span></div><span>Markdown 示例文章</span></a></li></ul>
   </div>
 </section>
 
@@ -3057,7 +3069,7 @@ p.admonition-title {
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2024-03-21 日</div>
+          <div id="last-update-show">2024-03-22 日</div>
         </div>
       
     </div>
@@ -3093,7 +3105,7 @@ p.admonition-title {
       <meting-js
         theme='#1BCDFC'
         autoplay='false'
-        volume='0.7'
+        volume='0.4'
         loop='all'
         order='list'
         fixed='false'
@@ -3233,6 +3245,10 @@ p.admonition-title {
 </script>
 
 <!-- required -->
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
 
 <!-- internal -->
@@ -4299,38 +4315,34 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- import body_end begin-->
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
-    <script> 
+    <script>
 volantis.rightmenu.jump = (type) => { 
-  const selector = type === 'prev' ? 'article .prev-next a.prev' : 'article .prev-next a.next';
-  const item = document.querySelector(selector); 
-  if(!!item) { 
-    if(typeof pjax !== 'undefined') { 
-      pjax.loadUrl(item.href) 
-    } else { 
-      window.location.href = item.href; 
-    } 
-  } 
+  console.log(type)
+  const selector = $(type == 'prev' ? 'article .prev-next a.prev' : 'article .prev-next a.next');
+  if (selector.length > 0) {
+    const href = selector.attr("href");
+    if (typeof pjax !== 'undefined') pjax.loadUrl(href);
+    else window.location.href = href;
+  }
 } 
 
-volantis.rightmenu.handle(() => { 
-  const prev = document.querySelector('#prev').parentElement, 
-    next = document.querySelector('#next').parentElement, 
-    articlePrev = document.querySelector('article .prev-next a.prev p.title'), 
-    articleNext = document.querySelector('article .prev-next a.next p.title'); 
+volantis.rightmenu.handle(() => {
+  const prev = $('#prev').parent(),
+    next = $('#next').parent(),
+    articlePrev = $('article .prev-next a.prev p.title').text(),
+    articleNext = $('article .prev-next a.next p.title').text();
 
-  prev.style.display = articlePrev ? 'block' : 'none'; 
-  prev.title = articlePrev ? articlePrev.innerText : null; 
-  next.style.display = articleNext ? 'block' : 'none'; 
-  next.title = articleNext ? articleNext.innerText : null; 
-}, 'prevNext', false)
+  prev.css('display', articlePrev ? 'block' : 'none');
+  prev.prop('title', articlePrev || null);
+  next.css('display', articleNext ? 'block' : 'none');
+  next.prop('title', articleNext || null);
+}, 'prevNext', false);
 
 // 监听 color-schme 变化并修改背景图
 function updateBgImage() {
-  const colorScheme = document.documentElement.getAttribute('color-scheme')
-  document.body.style.backgroundImage = `url("/img/email-pattern-${colorScheme ?? "dark"}.png")`;
+  const colorScheme = $('html').attr('color-scheme');
+  $('body').css('backgroundImage', `url("/img/email-pattern-${colorScheme || "dark"}.png")`);
 }
-
-document.addEventListener('DOMContentLoaded', updateBgImage);
 
 const observer = new MutationObserver((mutationsList, observer) => {
   for (const mutation of mutationsList) {
@@ -4340,6 +4352,19 @@ const observer = new MutationObserver((mutationsList, observer) => {
   }
 });
 observer.observe(document.documentElement, { attributes: true, childList: false, subtree: false });
+
+$(document).ready(function() {
+  updateBgImage();
+  $('h1, h2, h3, h4, h5, h6').each(function () {
+    const link = $(this).find('.headerlink');
+    if (link.length > 0) {
+      const orgHt = (window.getComputedStyle(this, '::before')).getPropertyValue('height');
+      const aftHt = parseInt(orgHt) * 0.75;
+      $('head').append($('<style>').text(`#${$(this).attr("id")}:before{height:${aftHt}px !important;}`));
+      $(this).append(link.html("#"));
+    }
+  });
+});
 </script>
     <!-- Custom Files bodyEnd end-->
   </body>

@@ -2131,7 +2131,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1710994962582),
+    lastupdate: new Date(1711040117705),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2200,6 +2200,15 @@ td {
 	white-space: nowrap;
 }
 
+.headerlink {
+  user-select: none;
+  margin-left: 8px;
+}
+
+.headerlink:hover {
+  color: #9B9C9D !important;
+  text-decoration: underline;
+}
 /*
 https://github.com/pilgrimlyieu/hexo-admonition-lyieu/blob/master/lib/default.css
 Modified by btjawa
@@ -2815,85 +2824,9 @@ p.admonition-title {
         
         
           
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.btjawa.top/posts/markdown/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="btjawa's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="btjawa's Blog">
-    <meta itemprop="description" content="btjawa's simple blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/markdown/"  itemprop="url">
-        Markdown 示例文章
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>这是一篇 Markdown 示例文章。其中包含多种 Markdown 元素，例如代码块、引用、列表、表格等常用元素，适合用于 CSS 等渲染测试。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://avatars.githubusercontent.com/u/125720787?v=4'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://avatars.githubusercontent.com/u/125720787?v=4">
-            <meta itemprop="name" content="btjawa">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-20T00:00:00+08:00">2024-03-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Markdown/">Markdown</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Markdown/" itemprop="url"><span itemprop="name">Markdown</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/markdown/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+            
+              <div class='post-wrapper'>
+                <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://blog.btjawa.top/posts/bilitools/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="btjawa's Blog">
@@ -2904,6 +2837,10 @@ p.admonition-title {
   </span>
   
   
+    <div class='pin'>
+      <img alt="BiliTools" src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4cc.svg'/>
+    </div>
+  
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2911,7 +2848,7 @@ p.admonition-title {
   
   
     
-    <h2 class="article-title"  itemprop="name headline">
+    <h2 class="article-title" pin itemprop="name headline">
       <a href="/posts/bilitools/"  itemprop="url">
         BiliTools
       </a>
@@ -2956,6 +2893,84 @@ p.admonition-title {
       
         <div>
           <a class='readmore' href='/posts/bilitools/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+              </div>
+            
+          
+        
+          
+        
+      
+    
+    
+      
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://blog.btjawa.top/posts/markdown/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="btjawa's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="btjawa's Blog">
+    <meta itemprop="description" content="btjawa's simple blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/markdown/"  itemprop="url">
+        Markdown 示例文章
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <p>这是一篇 Markdown 示例文章。其中包含多种 Markdown 元素，例如代码块、引用、列表、表格等常用元素，适合用于 CSS 等渲染测试。</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img src='https://avatars.githubusercontent.com/u/125720787?v=4'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://avatars.githubusercontent.com/u/125720787?v=4">
+            <meta itemprop="name" content="btjawa">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-12-18T16:42:00+08:00">2023-12-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Markdown/">Markdown</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Markdown/" itemprop="url"><span itemprop="name">Markdown</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/posts/markdown/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3143,7 +3158,7 @@ p.admonition-title {
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/bilitools/"><div class="item"><time>2024-03-21</time><span>Tauri</span></div><span>BiliTools</span></a></li><li><a class="widget-last" href="/posts/markdown/"><div class="item"><time>2024-03-21</time><span>Markdown</span></div><span>Markdown 示例文章</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/bilitools/"><div class="item"><time>2024-03-22</time><span>Tauri</span></div><span>BiliTools</span></a></li><li><a class="widget-last" href="/posts/markdown/"><div class="item"><time>2024-03-22</time><span>Markdown</span></div><span>Markdown 示例文章</span></a></li></ul>
   </div>
 </section>
 
@@ -3192,7 +3207,7 @@ p.admonition-title {
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2024-03-21 日</div>
+          <div id="last-update-show">2024-03-22 日</div>
         </div>
       
     </div>
@@ -3229,7 +3244,7 @@ p.admonition-title {
       <meting-js
         theme='#1BCDFC'
         autoplay='false'
-        volume='0.7'
+        volume='0.4'
         loop='all'
         order='list'
         fixed='false'
@@ -3369,6 +3384,10 @@ p.admonition-title {
 </script>
 
 <!-- required -->
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
 
 <!-- internal -->
@@ -4435,38 +4454,34 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- import body_end begin-->
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
-    <script> 
+    <script>
 volantis.rightmenu.jump = (type) => { 
-  const selector = type === 'prev' ? 'article .prev-next a.prev' : 'article .prev-next a.next';
-  const item = document.querySelector(selector); 
-  if(!!item) { 
-    if(typeof pjax !== 'undefined') { 
-      pjax.loadUrl(item.href) 
-    } else { 
-      window.location.href = item.href; 
-    } 
-  } 
+  console.log(type)
+  const selector = $(type == 'prev' ? 'article .prev-next a.prev' : 'article .prev-next a.next');
+  if (selector.length > 0) {
+    const href = selector.attr("href");
+    if (typeof pjax !== 'undefined') pjax.loadUrl(href);
+    else window.location.href = href;
+  }
 } 
 
-volantis.rightmenu.handle(() => { 
-  const prev = document.querySelector('#prev').parentElement, 
-    next = document.querySelector('#next').parentElement, 
-    articlePrev = document.querySelector('article .prev-next a.prev p.title'), 
-    articleNext = document.querySelector('article .prev-next a.next p.title'); 
+volantis.rightmenu.handle(() => {
+  const prev = $('#prev').parent(),
+    next = $('#next').parent(),
+    articlePrev = $('article .prev-next a.prev p.title').text(),
+    articleNext = $('article .prev-next a.next p.title').text();
 
-  prev.style.display = articlePrev ? 'block' : 'none'; 
-  prev.title = articlePrev ? articlePrev.innerText : null; 
-  next.style.display = articleNext ? 'block' : 'none'; 
-  next.title = articleNext ? articleNext.innerText : null; 
-}, 'prevNext', false)
+  prev.css('display', articlePrev ? 'block' : 'none');
+  prev.prop('title', articlePrev || null);
+  next.css('display', articleNext ? 'block' : 'none');
+  next.prop('title', articleNext || null);
+}, 'prevNext', false);
 
 // 监听 color-schme 变化并修改背景图
 function updateBgImage() {
-  const colorScheme = document.documentElement.getAttribute('color-scheme')
-  document.body.style.backgroundImage = `url("/img/email-pattern-${colorScheme ?? "dark"}.png")`;
+  const colorScheme = $('html').attr('color-scheme');
+  $('body').css('backgroundImage', `url("/img/email-pattern-${colorScheme || "dark"}.png")`);
 }
-
-document.addEventListener('DOMContentLoaded', updateBgImage);
 
 const observer = new MutationObserver((mutationsList, observer) => {
   for (const mutation of mutationsList) {
@@ -4476,6 +4491,19 @@ const observer = new MutationObserver((mutationsList, observer) => {
   }
 });
 observer.observe(document.documentElement, { attributes: true, childList: false, subtree: false });
+
+$(document).ready(function() {
+  updateBgImage();
+  $('h1, h2, h3, h4, h5, h6').each(function () {
+    const link = $(this).find('.headerlink');
+    if (link.length > 0) {
+      const orgHt = (window.getComputedStyle(this, '::before')).getPropertyValue('height');
+      const aftHt = parseInt(orgHt) * 0.75;
+      $('head').append($('<style>').text(`#${$(this).attr("id")}:before{height:${aftHt}px !important;}`));
+      $(this).append(link.html("#"));
+    }
+  });
+});
 </script>
     <!-- Custom Files bodyEnd end-->
   </body>
