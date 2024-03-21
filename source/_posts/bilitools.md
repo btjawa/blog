@@ -4,6 +4,7 @@ date: "2024-01-12 22:55:00+08:00"
 author: btjawa
 description: bilibili工具箱，视频/番剧+伴音/音乐下载，三种登录方式，仅用作学习用途。
 comments: true
+pin: true
 categories: [ "Tauri", "Rust", "BiliTools" ]
 tags: [ "bilitools","tauri","rust","工具","tool","bilibili" ]
 ---

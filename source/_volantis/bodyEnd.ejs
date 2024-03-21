@@ -1,35 +1,31 @@
-<script> 
+<script>
 volantis.rightmenu.jump = (type) => { 
-  const selector = type === 'prev' ? 'article .prev-next a.prev' : 'article .prev-next a.next';
-  const item = document.querySelector(selector); 
-  if(!!item) { 
-    if(typeof pjax !== 'undefined') { 
-      pjax.loadUrl(item.href) 
-    } else { 
-      window.location.href = item.href; 
-    } 
-  } 
+  console.log(type)
+  const selector = $(type == 'prev' ? 'article .prev-next a.prev' : 'article .prev-next a.next');
+  if (selector.length > 0) {
+    const href = selector.attr("href");
+    if (typeof pjax !== 'undefined') pjax.loadUrl(href);
+    else window.location.href = href;
+  }
 } 
 
-volantis.rightmenu.handle(() => { 
-  const prev = document.querySelector('#prev').parentElement, 
-    next = document.querySelector('#next').parentElement, 
-    articlePrev = document.querySelector('article .prev-next a.prev p.title'), 
-    articleNext = document.querySelector('article .prev-next a.next p.title'); 
+volantis.rightmenu.handle(() => {
+  const prev = $('#prev').parent(),
+    next = $('#next').parent(),
+    articlePrev = $('article .prev-next a.prev p.title').text(),
+    articleNext = $('article .prev-next a.next p.title').text();
 
-  prev.style.display = articlePrev ? 'block' : 'none'; 
-  prev.title = articlePrev ? articlePrev.innerText : null; 
-  next.style.display = articleNext ? 'block' : 'none'; 
-  next.title = articleNext ? articleNext.innerText : null; 
-}, 'prevNext', false)
+  prev.css('display', articlePrev ? 'block' : 'none');
+  prev.prop('title', articlePrev || null);
+  next.css('display', articleNext ? 'block' : 'none');
+  next.prop('title', articleNext || null);
+}, 'prevNext', false);
 
 // 监听 color-schme 变化并修改背景图
 function updateBgImage() {
-  const colorScheme = document.documentElement.getAttribute('color-scheme')
-  document.body.style.backgroundImage = `url("/img/email-pattern-${colorScheme ?? "dark"}.png")`;
+  const colorScheme = $('html').attr('color-scheme');
+  $('body').css('backgroundImage', `url("/img/email-pattern-${colorScheme || "dark"}.png")`);
 }
-
-document.addEventListener('DOMContentLoaded', updateBgImage);
 
 const observer = new MutationObserver((mutationsList, observer) => {
   for (const mutation of mutationsList) {
@@ -39,4 +35,17 @@ const observer = new MutationObserver((mutationsList, observer) => {
   }
 });
 observer.observe(document.documentElement, { attributes: true, childList: false, subtree: false });
+
+$(document).ready(function() {
+  updateBgImage();
+  $('h1, h2, h3, h4, h5, h6').each(function () {
+    const link = $(this).find('.headerlink');
+    if (link.length > 0) {
+      const orgHt = (window.getComputedStyle(this, '::before')).getPropertyValue('height');
+      const aftHt = parseInt(orgHt) * 0.75;
+      $('head').append($('<style>').text(`#${$(this).attr("id")}:before{height:${aftHt}px !important;}`));
+      $(this).append(link.html("#"));
+    }
+  });
+});
 </script>
