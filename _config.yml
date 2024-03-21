@@ -17,7 +17,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://blog.btjawa.top
-permalink: :year/:month/:day/:title/
+permalink: posts/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -99,7 +99,16 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-volantis
+theme: volantis
+
+# RSS
+plugins:
+  - hexo-generator-feed
+# Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -111,6 +120,9 @@ import:
   # Favicon
     - <link rel="icon" href="https://btjawa.top/favicon.ico">
     - <link rel="apple-touch-icon" href="https://btjawa.top/img/icon/apple-touch-icon.png">
+  # Fonts
+    - <link href="https://fonts.googlefonts.cn/css?family=Comfortaa" rel="stylesheet">
+    - <link href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/lxgwwenkai-regular.min.css" rel="stylesheet">
   head_end:
   body_begin:
   body_end:

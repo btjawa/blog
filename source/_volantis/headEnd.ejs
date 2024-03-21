@@ -1,0 +1,179 @@
+<style>
+/*
+https://github.com/pilgrimlyieu/hexo-admonition-lyieu/blob/master/lib/default.css
+Modified by btjawa
+*/
+
+.admonition {
+  font-size: 0.96em !important;
+  padding: .6rem !important;
+}
+.admonition.note::before {
+    display: none;
+}
+.admonition > :last-child {
+  margin-bottom: 0 !important;
+}
+.admonition-title::before {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  content: " ";
+}
+p.admonition-title {
+  box-sizing: content-box;
+  position: relative;
+  margin: -0.6rem -0.6rem 0.8em -0.6rem !important;
+  padding: 0.4rem 0.6rem 0.4rem 2.5rem !important;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.admonition.adm-note,
+.admonition.adm-question,
+.admonition.adm-success {
+  border-color: rgb(66, 185, 131);
+}
+.adm-note > .admonition-title::before,
+.adm-question > .admonition-title::before,
+.adm-success > .admonition-title::before {
+  background-color: rgb(66, 185, 131);
+}
+.adm-note > .admonition-title,
+.adm-question > .admonition-title,
+.adm-success > .admonition-title {
+  background-color: rgba(66, 185, 131, 0.4);
+}
+
+.admonition.adm-info,
+.admonition.adm-todo {
+  border-color: rgb(0, 184, 212);
+}
+.adm-info > .admonition-title::before,
+.adm-todo > .admonition-title::before {
+  background-color: rgb(0, 184, 212);
+}
+.adm-info > .admonition-title,
+.adm-todo > .admonition-title {
+  background-color: rgba(0, 184, 212, 0.4);
+}
+
+.admonition.adm-warning,
+.admonition.adm-attention,
+.admonition.adm-caution {
+  border-color: rgb(255, 145, 0);
+}
+.adm-warning > .admonition-title::before,
+.adm-attention > .admonition-title::before,
+.adm-caution > .admonition-title::before {
+  background-color: rgb(255, 145, 0);
+}
+.adm-warning > .admonition-title,
+.adm-attention > .admonition-title,
+.adm-caution > .admonition-title {
+  background-color: rgba(255, 145, 0, 0.4);
+}
+
+.admonition.adm-failure,
+.admonition.adm-missing,
+.admonition.adm-danger,
+.admonition.adm-bug,
+.admonition.adm-error {
+  border-color: rgb(255, 82, 82);
+}
+.adm-failure > .admonition-title::before,
+.adm-missing > .admonition-title::before,
+.adm-danger > .admonition-title::before,
+.adm-bug > .admonition-title::before,
+.adm-error > .admonition-title::before {
+  background-color: rgb(255, 82, 82);
+}
+.adm-failure > .admonition-title,
+.adm-missing > .admonition-title,
+.adm-danger > .admonition-title,
+.adm-bug > .admonition-title,
+.adm-error > .admonition-title {
+  background-color: rgba(255, 82, 82, 0.4);
+}
+
+.admonition.adm-example {
+  border-color: rgb(144, 61, 204);
+}
+.adm-example > .admonition-title::before {
+  background-color: rgb(144, 61, 204);
+}
+.adm-example > .admonition-title {
+  background-color: rgba(144, 61, 204, 0.4);
+}
+
+.admonition.adm-quote {
+  border-color: rgb(170, 170, 170);
+}
+.adm-quote > .admonition-title::before {
+  background-color: rgb(170, 170, 170);
+}
+.adm-quote > .admonition-title {
+  background-color: rgba(170, 170, 170, 0.4);
+}
+
+.admonition.adm-tip,
+.admonition.adm-abstract {
+  border-color: rgb(68, 138, 255);
+}
+.adm-tip > .admonition-title::before,
+.adm-abstract > .admonition-title::before {
+  background-color: rgb(68, 138, 255);
+}
+.adm-tip > .admonition-title,
+.adm-abstract > .admonition-title {
+  background-color: rgba(68, 138, 255, 0.4);
+}
+
+.admonition.adm-memo,
+.admonition.adm-sheet {
+  border-color: rgb(195, 162, 16);
+}
+.adm-memo > .admonition-title::before,
+.adm-sheet > .admonition-title::before {
+  background-color: rgb(195, 162, 16);
+}
+.adm-memo > .admonition-title,
+.adm-sheet > .admonition-title {
+  background-color: rgba(195, 162, 16, 0.4);
+}
+
+@media (prefers-color-scheme: light) {
+  .admonition {
+    background-color: rgb(238, 238, 238);
+  }
+
+  .admonition.test {
+    border-color: rgb(40, 55, 71);
+  }
+  .test > .admonition-title::before {
+    background-color: rgb(40, 55, 71);
+  }
+  .test > .admonition-title {
+    background-color: rgba(40, 55, 71, 0.4);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .admonition {
+    background-color: rgb(68, 68, 68);
+  }
+
+  .admonition.test {
+    border-color: rgb(242, 243, 244);
+  }
+  .test > .admonition-title::before {
+    background-color: rgb(242, 243, 244);
+  }
+  .test > .admonition-title {
+    background-color: rgba(242, 243, 244, 0.4);
+  }
+}
+</style>
