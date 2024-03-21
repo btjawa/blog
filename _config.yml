@@ -118,8 +118,15 @@ deploy:
 import:
   head_begin:
   # Favicon
-    - <link rel="icon" href="https://btjawa.top/favicon.ico">
-    - <link rel="apple-touch-icon" href="https://btjawa.top/img/icon/apple-touch-icon.png">
+    - <link rel="apple-touch-icon" sizes="200x200" href="/img/apple-touch-icon.png">
+    - <link rel="shortcut icon" href="/img/apple-touch-icon.png">
+    - <link rel="icon" href="/img/favicon.ico">
+    - <meta name="apple-mobile-web-app-title" content="btjawa's Blog">
+    - <meta name="application-name" content="btjawa's Blog">
+    - <meta name="msapplication-TileColor" content="#ffffff">
+    - <meta name="theme-color" content="#ffffff">
+    - '<meta name="theme-color" content="#f4f4f4" media="(prefers-color-scheme: light)">'
+    - '<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">'
   # Fonts
     - <link href="https://fonts.googlefonts.cn/css?family=Comfortaa" rel="stylesheet">
     - <link href="https://fonts.googlefonts.cn/css?family=Source+Code+Pro" rel="stylesheet">

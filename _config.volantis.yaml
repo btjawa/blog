@@ -136,22 +136,22 @@ navbar:
     title:
   menu:
     - name: 博客
-      icon: fa-solid fa-blog
+      icon: fa-duotone fa-blog
       url: /
     - name: 关于
-      icon: fa-solid fa-info-circle
+      icon: fa-duotone fa-info-circle
       url: about/
     - name: 归档
-      icon: fa-solid fa-archive
+      icon: fa-duotone fa-archive
       url: archives/
     - name: 主站
-      icon: fa-solid fa-home
+      icon: fa-duotone fa-home
       url: https://btjawa.top/
     - name: 更多
-      icon: fa-solid fa-ellipsis-v
+      icon: fa-duotone fa-ellipsis-v
       rows:
         - name: 暗黑模式
-          icon: fa-solid fa-moon
+          icon: fa-duotone fa-moon-stars WISTERIA fa-fade
           toggle: darkmode
         - name: 本站源码
           url: https://github.com/btjawa/blog/tree/dev/
@@ -194,19 +194,19 @@ cover:
   search: 想找点什么～ # search bar placeholder
   features:
     - name: 博客
-      icon: fa-solid fa-blog
+      icon: fa-duotone fa-blog
       img:
       url: /
     - name: 关于
-      icon: fa-solid fa-info-circle
+      icon: fa-duotone fa-info-circle
       img: 
       url: /about/
     - name: 归档
-      icon: fa-solid fa-archive
+      icon: fa-duotone fa-archive
       img: 
       url: /archives/
     - name: 主站
-      icon: fa-solid fa-home
+      icon: fa-duotone fa-home
       img: 
       url: https://btjawa.top
 ############################### Cover ############################### > end
@@ -251,7 +251,7 @@ article:
       # 参考资料、相关资料等 (for layout: post/docs)
       references:
         title: 参考资料
-        icon: fa-solid fa-quote-left
+        icon: fa-duotone fa-quote-left
         # 在 front-matter 中:
         #   references:
         #     - title: 某篇文章
@@ -264,7 +264,7 @@ article:
         enable: false
         layout: ["post", "docs"]
         title: 推荐阅读
-        icon: fa-solid fa-bookmark
+        icon: fa-duotone fa-bookmark
         max_count: 6
         # placeholder_img: https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg
         placeholder_img:
@@ -279,7 +279,7 @@ article:
       related_posts:
         enable: false
         title: 相关文章
-        icon: fa-solid fa-bookmark
+        icon: fa-duotone fa-bookmark
         max_count: 5
         # 设为空则不使用文章头图
         # placeholder_img: https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg
@@ -343,36 +343,36 @@ article:
         url: /
       # 文章创建日期
       date:
-        icon: fa-solid fa-calendar-alt
+        icon: fa-duotone fa-calendar-alt
         title: '发布于：'
         format: 'll' # 日期格式 http://momentjs.com/docs/
       # 文章更新日期
       updated:
-        icon: fa-solid fa-edit
+        icon: fa-duotone fa-edit
         title: '更新于：'
         format: 'll' # 日期格式 http://momentjs.com/docs/
       # 文章分类
       category:
-        icon: fa-solid fa-folder-open
+        icon: fa-duotone fa-folder-open
       # 文章浏览计数
       counter:
-        icon: fa-solid fa-eye
+        icon: fa-duotone fa-eye
         unit: '次浏览'
       # waline 文章评论数量
       walinecount:
-        icon: fa-solid fa-comment-dots
+        icon: fa-duotone fa-comment-dots
         desc: '条评论' # 条评论
       # artalk 文章评论数量
       artalkcount:
-        icon: fa-solid fa-comment-dots
+        icon: fa-duotone fa-comment-dots
         desc: '条评论' # 条评论
       # 文章字数和阅读时长
       wordcount:
-        icon_wordcount: fa-solid fa-keyboard
-        icon_duration: fa-solid fa-hourglass-half
+        icon_wordcount: fa-duotone fa-keyboard
+        icon_duration: fa-duotone fa-hourglass-half
       # 文章标签
       tags:
-        icon: fa-solid fa-hashtag
+        icon: fa-duotone fa-hashtag
       # 分享
       share:
         - id: qq
@@ -390,7 +390,7 @@ article:
 
 ############################### Comments ############################### > start
 comments:
-  title: <i class='fa-solid fa-comments'></i> 评论
+  title: <i class='fa-duotone fa-comments'></i> 评论
   subtitle:
   service: giscus
   # 可选评论系统 #
@@ -604,7 +604,7 @@ sidebar:
       display: [desktop, mobile] # [desktop, mobile]
       sticky: true
       header:
-        icon: fa-solid fa-list
+        icon: fa-duotone fa-list
         title: 本文目录
       list_number: true
       min_depth: 2
@@ -620,7 +620,7 @@ sidebar:
       class: category
       display: [desktop] # [desktop, mobile]
       header:
-        icon: fa-solid fa-folder-open
+        icon: fa-duotone fa-folder-open
         title: 文章分类
         url: /categories/
     # ---------------------------------------
@@ -629,7 +629,7 @@ sidebar:
       class: tagcloud
       display: [desktop, mobile] # [desktop, mobile]
       header:
-        icon: fa-solid fa-tags
+        icon: fa-duotone fa-tags
         title: 热门标签
         url: /tags/
       min_font: 14
@@ -651,7 +651,7 @@ sidebar:
       class: webinfo
       display: [desktop]
       header:
-        icon: fa-solid fa-award
+        icon: fa-duotone fa-award
         title: 站点信息
       type:
         article:
@@ -686,7 +686,7 @@ sidebar:
       class: lastupdate
       display: [desktop, mobile]
       header:
-        icon: fa-solid fa-clock WISTERIA
+        icon: fa-duotone fa-clock
         title: 最近更新
     # ---------------------------------------
     # Artalk widget
@@ -700,15 +700,15 @@ sidebar:
       class: memos_carousel
       display: [desktop, mobile]
       header:
-        icon: fa-solid fa-volume-high
+        icon: fa-duotone fa-volume-high
         title: 说说
         url: /blog/memos/ # 说说页面的地址
       url: 'https://s.dusays.com/' # 替换城自己的域名，也可以用杜老师的平台托管
       limit: '10' # 展示数量限制
       creatorId: '1' # 替换成自己的用户的ID
       tag: '' # 要展示的内容的标签
-      image: 'fa-solid fa-image' # 图片替换成图标
-      link: 'fa-solid fa-link' # 链接替换成图标
+      image: 'fa-duotone fa-image' # 图片替换成图标
+      link: 'fa-duotone fa-link' # 链接替换成图标
       placeholder: '说说加载中...' # 占位符
 
 ############################### Sidebar ############################### > end
@@ -721,7 +721,7 @@ tag_plugins:
   note: # style for default note:
     icon: '\f054'
     color: ''
-    iconfont: 'Font Awesome 6 Free'
+    iconfont: 'Font Awesome 6 Pro'
   # {% checkbox %}
   checkbox:
     interactive: false # enable interactive for user
@@ -737,7 +737,7 @@ site_footer:
   # layout of footer: [aplayer, social, license, info, copyright]
   layout: [aplayer, social, license, using, analytics, copyright]
   social:
-    - icon: fa-solid fa-rss
+    - icon: fa-duotone fa-rss
       url: /atom.xml/
     - icon: fa-brands fa-bilibili
       url: https://space.bilibili.com/524309471/
@@ -753,8 +753,8 @@ site_footer:
   source: https://github.com/btjawa/blog/tree/dev/
   # analytics using busuanzi
   analytics: >
-    <span>本站总访问量为 <span id='busuanzi_value_site_pv'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span>
-    <span>访客数为 <span id='busuanzi_value_site_uv'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span>
+    <span>本站总访问量为 <span id='busuanzi_value_site_pv'><i class="fa-duotone fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span>
+    <span>访客数为 <span id='busuanzi_value_site_uv'><i class="fa-duotone fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span>
   # site copyright
   copyright: 'Copyright © <script>document.write((new Date()).getFullYear());</script> btjawa'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
@@ -770,7 +770,7 @@ plugins:
   # jquery
   globalJquery: true # 全局引入 jquery
   # fontawesome
-  fontawesome: true
+  fontawesome: volantis-static/libs/@fortawesome/fontawesome-pro/css/all.min.css
   ################ optional plugins ################
   # issues api
   sitesjs:
@@ -847,7 +847,7 @@ plugins:
   # fontawesome V6:  https://fontawesome.com/docs/web/style/animate
   # fontawesome animation for fontawesome V5
   fontawesome_animation:
-    enable: true
+    enable: false
  
   # Typing Effects
   comment_typing:
@@ -932,7 +932,7 @@ plugins:
   # 暗黑模式 darkmode
   # 开关按钮：在 navbar.menu 中添加：
   # - name: 暗黑模式 # 可自定义
-  #   icon: fa-solid fa-moon # 可自定义
+  #   icon: fa-duotone fa-moon # 可自定义
   #   toggle: darkmode
   darkmode:
     enable: true
@@ -1002,8 +1002,8 @@ plugins:
   message:
     enable: true
     icon:     # 默认图标，支持对图标添加颜色，可选值：see：/source/css/_style/_plugins/fontcolor.styl
-      default: fa-solid fa-info-circle light-blue
-      quection: fa-solid fa-question-circle light-blue
+      default: fa-duotone fa-info-circle light-blue
+      quection: fa-duotone fa-question-circle light-blue
     time:     # 默认持续时间
       default: 5000
       quection: 20000
@@ -1021,8 +1021,8 @@ plugins:
       icon: 'far fa-copyright light-blue'
     aplayer:                              # 是否开启音乐通知；播放、暂停、失败 时的图标
       enable: true
-      play: fa-solid fa-play
-      pause: fa-solid fa-pause
+      play: fa-duotone fa-play
+      pause: fa-duotone fa-pause
     rightmenu:
       enable: true                        # 是否开启右键模块的消息通知
       notice: true                        # 唤醒原右键菜单的通知
@@ -1095,8 +1095,8 @@ rightmenus:
   ###########################
   # 基础项设置
   options:
-    # 图标前缀 fa-solid, fa-regular, fa-light, fa-thin, fa-duotone, fa-brands
-    iconPrefix: fa-solid
+    # 图标前缀 fa-duotone, fa-regular, fa-light, fa-thin, fa-duotone, fa-brands
+    iconPrefix: fa-duotone
     # 例外，在 articlePage 组显示时（文章页）时依旧显示含 link 属性的菜单项
     articleShowLink: true
     # 当设定全局音乐播放器时，是否一直显示音乐控制菜单。false：仅当音乐播放时启用
@@ -1106,53 +1106,53 @@ rightmenus:
     # 导航组件
     # 横向排列，共用一行，仅显示图标 (原则上支持的数量不限)
     navigation:
-      - {id: 'left', name: '转到上一页', icon: 'fa-solid fa-arrow-left', event: 'history.back()', group: 'navigation'}
-      - {id: 'right', name: '转到下一页', icon: 'fa-solid fa-arrow-right', event: 'history.forward()', group: 'navigation'}
-      - {id: 'redo', name: '刷新当前页面', icon: 'fa-solid fa-redo', event: 'window.location.reload()', group: 'navigation'}
-      - {id: 'up', name: '回到顶部', icon: 'fa-solid fa-arrow-up', event: 'VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)', group: 'navigation'}
+      - {id: 'left', name: '转到上一页', icon: 'fa-duotone fa-arrow-left', event: 'history.back()', group: 'navigation'}
+      - {id: 'right', name: '转到下一页', icon: 'fa-duotone fa-arrow-right', event: 'history.forward()', group: 'navigation'}
+      - {id: 'redo', name: '刷新当前页面', icon: 'fa-duotone fa-redo', event: 'window.location.reload()', group: 'navigation'}
+      - {id: 'up', name: '回到顶部', icon: 'fa-duotone fa-arrow-up', event: 'VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)', group: 'navigation'}
     # 文本输入框相关组件
     # 生效于 input/textarea，粘贴、剪切、全选
     inputBox:
-      - {id: 'copyPaste', name: '粘贴文本', icon: 'fa-solid fa-paste', event: 'copyPaste', group: 'inputBox'}
-      - {id: 'copyAll', name: '全选文本', icon: 'fa-solid fa-object-ungroup', event: 'copyAll', group: 'inputBox'}
-      - {id: 'copyCut', name: '剪切文本', icon: 'fa-solid fa-cut', event: 'copyCut', group: 'inputBox'}
+      - {id: 'copyPaste', name: '粘贴文本', icon: 'fa-duotone fa-paste', event: 'copyPaste', group: 'inputBox'}
+      - {id: 'copyAll', name: '全选文本', icon: 'fa-duotone fa-object-ungroup', event: 'copyAll', group: 'inputBox'}
+      - {id: 'copyCut', name: '剪切文本', icon: 'fa-duotone fa-cut', event: 'copyCut', group: 'inputBox'}
     # 文本选中类组件
     # 生效于右键选中文本，__text__ 为选中的文本。
     seletctText:
-      - {id: 'copyText', name: '复制文本', icon: 'fa-solid fa-copy', event: 'copyText', group: 'seletctText'}
-      - {id: 'searchWord', name: '站内搜索', icon: 'fa-solid fa-search', event: 'OpenSearch(__text__)', group: 'seletctText'}
-      - {id: 'bingSearch', name: '必应搜索', icon: 'fa-solid fa-search', event: 'window.open(`https://cn.bing.com/search?q=${__text__}`)', group: 'seletctText'}
-      #- {id: 'googleSearch', name: '谷歌搜索', icon: 'fa-solid fa-search', event: 'window.open(`https://www.google.com/search?q=${__text__}`)', group: 'seletctText'}
+      - {id: 'copyText', name: '复制文本', icon: 'fa-duotone fa-copy', event: 'copyText', group: 'seletctText'}
+      - {id: 'searchWord', name: '站内搜索', icon: 'fa-duotone fa-search', event: 'OpenSearch(__text__)', group: 'seletctText'}
+      - {id: 'bingSearch', name: '必应搜索', icon: 'fa-duotone fa-search', event: 'window.open(`https://cn.bing.com/search?q=${__text__}`)', group: 'seletctText'}
+      #- {id: 'googleSearch', name: '谷歌搜索', icon: 'fa-duotone fa-search', event: 'window.open(`https://www.google.com/search?q=${__text__}`)', group: 'seletctText'}
     # 链接判断组件
     # 生效于链接处的右键行为，__link__ 为链接地址
     elementCheck:
-      - {id: 'openTab', name: '新标签页打开', icon: 'fa-solid fa-external-link-square-alt', event: 'window.open(__link__)', group: 'elementCheck'}
-      - {id: 'copyLink', name: '复制链接地址', icon: 'fa-solid fa-link', event: 'copyLink', group: 'elementCheck'}
+      - {id: 'openTab', name: '新标签页打开', icon: 'fa-duotone fa-external-link-square-alt', event: 'window.open(__link__)', group: 'elementCheck'}
+      - {id: 'copyLink', name: '复制链接地址', icon: 'fa-duotone fa-link', event: 'copyLink', group: 'elementCheck'}
     # 图片判断类组件
     # 生效于图片类的右键行为，__link__ 为链接地址
     elementImage:
-      - {id: 'copyImg', name: '复制图片', icon: 'fa-solid fa-image', event: 'copyImg', group: 'elementImage'}
-      - {id: 'googleImg', name: '谷歌识图', icon: 'fa-solid fa-images', event: 'window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)', group: 'elementImage'}
+      - {id: 'copyImg', name: '复制图片', icon: 'fa-duotone fa-image', event: 'copyImg', group: 'elementImage'}
+      - {id: 'googleImg', name: '谷歌识图', icon: 'fa-duotone fa-images', event: 'window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)', group: 'elementImage'}
     # 文章页面组件
     # 生效于 post.article 页面
     articlePage:
-      - {id: 'printMode', name: '打印页面', icon: 'fa-solid fa-print', event: 'printMode', group: 'articlePage'}
-      - {id: 'readMode', name: '阅读模式', icon: 'fa-solid fa-book-open', event: 'readMode', group: 'articlePage'}
+      - {id: 'printMode', name: '打印页面', icon: 'fa-duotone fa-print', event: 'printMode', group: 'articlePage'}
+      - {id: 'readMode', name: '阅读模式', icon: 'fa-duotone fa-book-open', event: 'readMode', group: 'articlePage'}
   # 右键自定义菜单区域
   menus:
     link:
-      - {id: 'home', name: '回到首页', icon: 'fa-solid fa-home', link: '/', group: 'navigation'}
-      # - {id: 'help', name: '常见问题', icon: 'fa-solid fa-question', link: 'https://volantis.js.org/faqs/', group: 'link'}
-      # - {id: 'examples', name: '示例博客', icon: 'fa-solid fa-rss', link: 'https://volantis.js.org/examples/', group: 'link'}
-      # - {id: 'contributors', name: '加入社区', icon: 'fa-solid fa-fan', link: 'https://volantis.js.org/contributors/', group: 'link'}
+      - {id: 'home', name: '回到首页', icon: 'fa-duotone fa-home PETERRIVE', link: '/', group: 'navigation'}
+      # - {id: 'help', name: '常见问题', icon: 'fa-duotone fa-question', link: 'https://volantis.js.org/faqs/', group: 'link'}
+      # - {id: 'examples', name: '示例博客', icon: 'fa-duotone fa-rss', link: 'https://volantis.js.org/examples/', group: 'link'}
+      # - {id: 'contributors', name: '加入社区', icon: 'fa-duotone fa-fan', link: 'https://volantis.js.org/contributors/', group: 'link'}
       - hr
-      - {id: 'source_docs', name: '本站源码', icon: 'fa-solid fa-code-branch', link: 'https://github.com/btjawa/blog/tree/dev/', group: 'link'}
-      - {id: 'source_theme', name: '主题源码', icon: 'fa-solid fa-code-branch', link: 'https://github.com/btjawa/hexo-theme-volantis/', group: 'link'}
+      - {id: 'source_docs', name: '本站源码', icon: 'fa-duotone fa-code-branch WETASPHALT', link: 'https://github.com/btjawa/blog/tree/dev/', group: 'link'}
+      - {id: 'source_theme', name: '主题源码', icon: 'fa-duotone fa-code-branch CONCRETE', link: 'https://github.com/btjawa/hexo-theme-volantis/', group: 'link'}
     darkMode:
-      - {id: 'darkMode', name: '暗黑模式', icon: 'fa-solid fa-moon', event: 'volantis.dark.toggle()', group: 'darkMode'}
+      - {id: 'darkMode', name: '暗黑模式', icon: 'fa-duotone fa-moon-stars WISTERIA fa-fade', event: 'volantis.dark.toggle()', group: 'darkMode'}
     prevNext:
-      - {id: 'prev', name: '查看上一篇', icon: 'fa-solid fa-angles-left', event: "volantis.rightmenu.jump('prev')", group: 'prevNext'}
-      - {id: 'next', name: '查看下一篇', icon: 'fa-solid fa-angles-right', event: "volantis.rightmenu.jump('next')", group: 'prevNext'}
+      - {id: 'prev', name: '查看上一篇', icon: 'fa-duotone fa-angles-left', event: "volantis.rightmenu.jump('prev')", group: 'prevNext'}
+      - {id: 'next', name: '查看下一篇', icon: 'fa-duotone fa-angles-right', event: "volantis.rightmenu.jump('next')", group: 'prevNext'}
 ###
 
 
