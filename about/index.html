@@ -55,8 +55,8 @@
 <meta property="og:site_name" content="btjawa&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-03-21T19:34:37.317Z">
-<meta property="article:modified_time" content="2024-03-21T19:34:37.317Z">
+<meta property="article:published_time" content="2024-03-21T22:34:22.726Z">
+<meta property="article:modified_time" content="2024-03-21T22:34:22.726Z">
 <meta property="article:author" content="btjawa">
 <meta property="article:tag" content="白弹汲, btjawa, btj, blog, 博客, hexo, volantis">
 <meta name="twitter:card" content="summary">
@@ -2138,7 +2138,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1711049710381),
+    lastupdate: new Date(1711060483895),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2194,17 +2194,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- import head_end end -->
   <!-- Custom Files headEnd begin-->
   <style>
-#post-body code {
-  font-size: 0.78em;
-  line-height: 1.5;
-  margin: auto 4px;
-  padding: 4px 6px;
-  background: var(--color-block);
-  border-radius: 2px;
+body {
+  background-image: url(/img/email-pattern-light.png)
 }
 
 td {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 .headerlink {
@@ -2216,182 +2211,31 @@ td {
   color: #9B9C9D !important;
   text-decoration: underline;
 }
-/*
-https://github.com/pilgrimlyieu/hexo-admonition-lyieu/blob/master/lib/default.css
-Modified by btjawa
-*/
 
-.admonition {
-  font-size: 0.96em !important;
-  padding: .6rem !important;
-}
-.admonition.note::before {
-    display: none;
-}
-.admonition > :last-child {
-  margin-bottom: 0 !important;
-}
-.admonition-title::before {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  content: " ";
-}
-p.admonition-title {
-  box-sizing: content-box;
-  position: relative;
-  margin: -0.6rem -0.6rem 0.8em -0.6rem !important;
-  padding: 0.4rem 0.6rem 0.4rem 2.5rem !important;
-  font-weight: 700;
-  line-height: 2;
-}
-
-.admonition.adm-note,
-.admonition.adm-question,
-.admonition.adm-success {
-  border-color: rgb(66, 185, 131);
-}
-.adm-note > .admonition-title::before,
-.adm-question > .admonition-title::before,
-.adm-success > .admonition-title::before {
-  background-color: rgb(66, 185, 131);
-}
-.adm-note > .admonition-title,
-.adm-question > .admonition-title,
-.adm-success > .admonition-title {
-  background-color: rgba(66, 185, 131, 0.4);
-}
-
-.admonition.adm-info,
-.admonition.adm-todo {
-  border-color: rgb(0, 184, 212);
-}
-.adm-info > .admonition-title::before,
-.adm-todo > .admonition-title::before {
-  background-color: rgb(0, 184, 212);
-}
-.adm-info > .admonition-title,
-.adm-todo > .admonition-title {
-  background-color: rgba(0, 184, 212, 0.4);
-}
-
-.admonition.adm-warning,
-.admonition.adm-attention,
-.admonition.adm-caution {
-  border-color: rgb(255, 145, 0);
-}
-.adm-warning > .admonition-title::before,
-.adm-attention > .admonition-title::before,
-.adm-caution > .admonition-title::before {
-  background-color: rgb(255, 145, 0);
-}
-.adm-warning > .admonition-title,
-.adm-attention > .admonition-title,
-.adm-caution > .admonition-title {
-  background-color: rgba(255, 145, 0, 0.4);
-}
-
-.admonition.adm-failure,
-.admonition.adm-missing,
-.admonition.adm-danger,
-.admonition.adm-bug,
-.admonition.adm-error {
-  border-color: rgb(255, 82, 82);
-}
-.adm-failure > .admonition-title::before,
-.adm-missing > .admonition-title::before,
-.adm-danger > .admonition-title::before,
-.adm-bug > .admonition-title::before,
-.adm-error > .admonition-title::before {
-  background-color: rgb(255, 82, 82);
-}
-.adm-failure > .admonition-title,
-.adm-missing > .admonition-title,
-.adm-danger > .admonition-title,
-.adm-bug > .admonition-title,
-.adm-error > .admonition-title {
-  background-color: rgba(255, 82, 82, 0.4);
-}
-
-.admonition.adm-example {
-  border-color: rgb(144, 61, 204);
-}
-.adm-example > .admonition-title::before {
-  background-color: rgb(144, 61, 204);
-}
-.adm-example > .admonition-title {
-  background-color: rgba(144, 61, 204, 0.4);
-}
-
-.admonition.adm-quote {
-  border-color: rgb(170, 170, 170);
-}
-.adm-quote > .admonition-title::before {
-  background-color: rgb(170, 170, 170);
-}
-.adm-quote > .admonition-title {
-  background-color: rgba(170, 170, 170, 0.4);
-}
-
-.admonition.adm-tip,
-.admonition.adm-abstract {
-  border-color: rgb(68, 138, 255);
-}
-.adm-tip > .admonition-title::before,
-.adm-abstract > .admonition-title::before {
-  background-color: rgb(68, 138, 255);
-}
-.adm-tip > .admonition-title,
-.adm-abstract > .admonition-title {
-  background-color: rgba(68, 138, 255, 0.4);
-}
-
-.admonition.adm-memo,
-.admonition.adm-sheet {
-  border-color: rgb(195, 162, 16);
-}
-.adm-memo > .admonition-title::before,
-.adm-sheet > .admonition-title::before {
-  background-color: rgb(195, 162, 16);
-}
-.adm-memo > .admonition-title,
-.adm-sheet > .admonition-title {
-  background-color: rgba(195, 162, 16, 0.4);
-}
-
-@media (prefers-color-scheme: light) {
-  .admonition {
-    background-color: rgb(238, 238, 238);
+@keyframes rightmenu-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
   }
+  100% {
+    opacity: 1;
+    filter: none;
+    transform: translateY(0);
+  }
+}
 
-  .admonition.test {
-    border-color: rgb(40, 55, 71);
-  }
-  .test > .admonition-title::before {
-    background-color: rgb(40, 55, 71);
-  }
-  .test > .admonition-title {
-    background-color: rgba(40, 55, 71, 0.4);
-  }
+#rightmenu-wrapper {
+  transition: all .1s ease;
 }
 
 @media (prefers-color-scheme: dark) {
-  .admonition {
-    background-color: rgb(68, 68, 68);
+  :root:not([color-scheme]) body {
+    background-image: url(/img/email-pattern-dark.png);
   }
+}
 
-  .admonition.test {
-    border-color: rgb(242, 243, 244);
-  }
-  .test > .admonition-title::before {
-    background-color: rgb(242, 243, 244);
-  }
-  .test > .admonition-title {
-    background-color: rgba(242, 243, 244, 0.4);
-  }
+[color-scheme=dark] body {
+  background-image: url(/img/email-pattern-dark.png);
 }
 </style>
   <!-- Custom Files headEnd end-->
@@ -4135,7 +3979,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"btjawa's Blog","url":"https://blog.btjawa.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"btjawa","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.btjawa.top/","sameAs":["https://github.com/btjawa"],"description":"btjawa's simple blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.btjawa.top/","name":"btjawa's Blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"btjawa's Blog","url":"https://blog.btjawa.top/","keywords":"白弹汲, btjawa, btj, blog, 博客, hexo, volantis","description":"btjawa's simple blog.","author":{"@type":"Person","name":"btjawa","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.btjawa.top/","description":"btjawa's simple blog."},"publisher":{"@type":"Organization","name":"btjawa's Blog","url":"https://blog.btjawa.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.btjawa.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于","description":"btjawa's simple blog.","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.btjawa.top/about/index.html"},"author":{"@type":"Person","name":"btjawa","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.btjawa.top/"},"publisher":{"@type":"Organization","name":"btjawa's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.btjawa.top/about/index.html","wordCount":0,"datePublished":"2024-03-21T19:34:37.317Z","dateModified":"2024-03-21T19:34:37.317Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"btjawa's Blog","url":"https://blog.btjawa.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"btjawa","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.btjawa.top/","sameAs":["https://github.com/btjawa"],"description":"btjawa's simple blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.btjawa.top/","name":"btjawa's Blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"btjawa's Blog","url":"https://blog.btjawa.top/","keywords":"白弹汲, btjawa, btj, blog, 博客, hexo, volantis","description":"btjawa's simple blog.","author":{"@type":"Person","name":"btjawa","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.btjawa.top/","description":"btjawa's simple blog."},"publisher":{"@type":"Organization","name":"btjawa's Blog","url":"https://blog.btjawa.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.btjawa.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于","description":"btjawa's simple blog.","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.btjawa.top/about/index.html"},"author":{"@type":"Person","name":"btjawa","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.btjawa.top/"},"publisher":{"@type":"Organization","name":"btjawa's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.btjawa.top/about/index.html","wordCount":0,"datePublished":"2024-03-21T22:34:22.726Z","dateModified":"2024-03-21T22:34:22.726Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
@@ -4167,23 +4011,7 @@ volantis.rightmenu.handle(() => {
   next.prop('title', articleNext || null);
 }, 'prevNext', false);
 
-// 监听 color-schme 变化并修改背景图
-function updateBgImage() {
-  const colorScheme = $('html').attr('color-scheme');
-  $('body').css('backgroundImage', `url("/img/email-pattern-${colorScheme || "dark"}.png")`);
-}
-
-const observer = new MutationObserver((mutationsList, observer) => {
-  for (const mutation of mutationsList) {
-    if (mutation.type === 'attributes' && mutation.attributeName === 'color-scheme') {
-      updateBgImage();
-    }
-  }
-});
-observer.observe(document.documentElement, { attributes: true, childList: false, subtree: false });
-
 $(document).ready(function() {
-  updateBgImage();
   $('h1, h2, h3, h4, h5, h6').each(function () {
     const link = $(this).find('.headerlink');
     if (link.length > 0) {
