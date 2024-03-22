@@ -4,7 +4,7 @@ const RightMenus = {
   defaultGroup: ['navigation', 'inputBox', 'seletctText', 'elementCheck', 'elementImage', 'articlePage'],
   messageRightMenu: volantis.GLOBAL_CONFIG.plugins.message.enable && volantis.GLOBAL_CONFIG.plugins.message.rightmenu.enable,
   corsAnywhere: volantis.GLOBAL_CONFIG.plugins.rightmenus.options.corsAnywhere,
-  urlRegx: /^((https|http)?:\/\/)+[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\':+!]*([^<>\"\"])*$/,
+  urlRegx: /^(https?:\/\/)?(([0-9a-z.]+\.[a-z]+)|(([0-9]{1,3}\.){3}[0-9]{1,3}))(:[0-9]+)?(\/[0-9a-z%/.\-_]*)?(\?[0-9a-z=&%_\-]*)?(\#[0-9a-z=&%_\-]*)?$/ig,
   imgRegx: /\.(jpe?g|png|webp|svg|gif|jifi)(-|_|!|\?|\/)?.*$/,
 
   /**
@@ -290,9 +290,13 @@ RightMenus.fun = (() => {
     }
 
     // 判断是否包含链接
-    if (!!event.target.href && RightMenus.urlRegx.test(event.target.href)) {
+    // Repaired by btjawa - 检查选中的文本是否通过Regex
+    if (RightMenus.urlRegx.test(event.target.href || globalData.selectText)) {
       globalData.isLink = true;
-      globalData.linkUrl = event.target.href;
+      globalData.linkUrl = event.target.href || globalData.selectText;
+      if (!/^https?:\/\//i.test(globalData.linkUrl)) {
+        globalData.linkUrl = "http://" + globalData.linkUrl;
+      }
     }
 
     // 判断是否包含媒体链接
