@@ -14,7 +14,7 @@ bilibili工具箱，视频/番剧+伴音/音乐下载，三种登录方式，仅
 
 ![bilitools.png](https://cdn.jsdelivr.net/gh/btjawa/btjawa/assets/bilitools.png)
 
-<a href="https://github.com/btjawa/bilitools" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;Github Repo</a>
+{% link Github Repo::https://github.com/btjawa/bilitools::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
 
 ## 介绍
 
@@ -48,11 +48,11 @@ bilibili工具箱，视频/番剧+伴音/音乐下载，三种登录方式，仅
 
 ## 感谢
 
-[哔哩哔哩-API收集整理](https://github.com/SocialSisterYi/bilibili-API-collect)
+{% link 哔哩哔哩-API收集整理::https://github.com/SocialSisterYi/bilibili-API-collect::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
 
-[FFmpeg](https://github.com/FFmpeg/FFmpeg)
+{% link FFmpeg::https://github.com/FFmpeg/FFmpeg::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
 
-[aria2](https://github.com/aria2/aria2)
+{% link aria2::https://github.com/aria2/aria2::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
 
 ## 数据结构
 
