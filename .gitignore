@@ -1,4 +1,6 @@
+.vscode
 .DS_Store
+._*
 Thumbs.db
 db.json
 *.log

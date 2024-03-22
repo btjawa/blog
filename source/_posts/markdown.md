@@ -1,6 +1,6 @@
 ---
 title: "Markdown 示例文章"
-date: "2023-12-19 00:42:00+08:00"
+date: "2023-12-19"
 author: "btjawa"
 plugins:
   - mathjax
