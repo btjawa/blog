@@ -293,7 +293,7 @@ article:
           - '博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议'
           - permalink
          # 自定义版权组件：精细到文章的版权声明
-        custom: false # 开启后替代上方内容的版权显示
+        custom: true # 开启后替代上方内容的版权显示
         customData:
           default: type1  # 默认授权声明
           #############################
@@ -309,7 +309,7 @@ article:
           rules:
             type1: 
               text: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#" target="_blank">CC BY-NC-SA 4.0</a>
-              desc: 署名-非商业性使用-相同方式共享 4.0 国际。
+              desc: 署名-非商业性使用-相同方式共享 4.0 国际。<br>您可以在页脚的 <a href="/policy">声明</a> 处查看更多信息。
             type2: 
               text: 禁止转载引用
               desc: 除非获得原作者的单独授权，任何第三方不得转载！
@@ -759,7 +759,8 @@ site_footer:
   copyright: 'Copyright © <script>document.write((new Date()).getFullYear());</script> btjawa'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   using: >
-    使用主题 <a target="_blank" href="https://github.com/btjawa/hexo-theme-volantis">Volantis</a>
+    <a target="_blank" href="/policy">网站声明</a>
+    · 使用主题 <a target="_blank" href="https://github.com/btjawa/hexo-theme-volantis">Volantis</a>
     · 由 <a target="_blank" href="https://hexo.io">Hexo</a> 强力驱动
     · <a target="_blank" href="https://pages.github.com"><i class="fa-brands fa-github"></i>&nbsp;GitHub Pages</a>
 ############################### Site Footer ############################### > end
@@ -1017,7 +1018,7 @@ plugins:
     copyright:                           # 是否在复制时弹出版权提示，影响范围：ctrl+c、代码块复制按钮、右键复制选项
       enable: true
       title: '知识共享许可协议'
-      message: '请遵守 CC BY-NC-SA 4.0 协议。'
+      message: '请遵守 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">CC BY-NC-SA 4.0 协议。</a>'
       icon: 'far fa-copyright light-blue'
     aplayer:                              # 是否开启音乐通知；播放、暂停、失败 时的图标
       enable: true
