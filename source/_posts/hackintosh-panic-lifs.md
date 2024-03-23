@@ -1,6 +1,6 @@
 ---
 title: 记一次黑苹果崩溃 / Panic
-date: "2024-03-23 00:56:00"
+date: "2024-03-23"
 author: btjawa
 comments: true
 categories: [ "黑苹果" ]
