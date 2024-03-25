@@ -34,7 +34,7 @@ bilibili工具箱，视频/番剧+伴音/音乐下载，三种登录方式，仅
     - 支持 FLV 下载
 - 音乐下载 - `AU`
     - 音质最高支持：`320K + 无损SQ FLAC`
-- 弹幕获取 - `实时弹幕 / 历史弹幕(Json)`
+- 弹幕获取 - `XML+ASS: 实时弹幕 / 历史弹幕`
 - 视频AI总结
 - 三种登录方式 + 自动刷新登录状态
     - 扫码登录
@@ -55,34 +55,11 @@ bilibili工具箱，视频/番剧+伴音/音乐下载，三种登录方式，仅
 
 {% link aria2::https://github.com/aria2/aria2::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
 
-## 数据结构
-
-<a href="https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/grpc_api/bilibili/community/service/dm/v1/dm.proto" target="_blank">
-<i class="fa-brands fa-github"></i>&nbsp;来源 - dm.proto</a>
-
-### DanmakuElem
-
-| 字段名     | 类型           | 描述 |
-|------------|----------------|------|
-| `id`       | `int64`        | 弹幕dmid |
-| `progress` | `int32`        | 弹幕出现位置（单位ms） |
-| `mode`     | `int32`        | 弹幕类型（1, 2, 3：普通弹幕；4：底部弹幕；5：顶部弹幕；6：逆向弹幕；7：高级弹幕；8：代码弹幕；9：BAS弹幕（pool必须为2）） |
-| `fontsize` | `int32`        | 弹幕字号 |
-| `color`    | `uint32`       | 弹幕颜色 |
-| `midHash`  | `string`       | 发送者mid hash |
-| `content`  | `string`       | 弹幕正文 |
-| `ctime`    | `int64`        | 发送时间 |
-| `weight`   | `int32`        | 权重，用于屏蔽等级（区间：[1,10]） |
-| `action`   | `string`       | 动作 |
-| `pool`     | `int32`        | 弹幕池（0：普通池；1：字幕池；2：特殊池（代码/BAS弹幕）） |
-| `idStr`    | `string`       | 弹幕dmid str |
-| `attr`     | `int32`        | 弹幕属性位（bin求AND）（bit0：保护；bit1：直播；bit2：高赞） |
-| `animation`| `string`       | 动画 |
-| `colorful` | `DmColorfulType` | 大会员专属颜色 |
+{% link DanmakuFactory::https://github.com/hihkm/DanmakuFactory::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
 
 ## 文档
 
-以下内容基于 <a href="https://github.com/btjawa/BiliTools/releases/tag/v1.1.0" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;BiliTools v1.1.0</a> 撰写。
+以下内容基于 <a href="https://github.com/btjawa/BiliTools/releases/tag/v1.1.2" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;BiliTools v1.1.2</a> 撰写。
 
 ### 设置项
 
