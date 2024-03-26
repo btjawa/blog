@@ -5,7 +5,7 @@ author: btjawa
 comments: true
 pin: true
 categories: [ "Tauri", "Rust" ]
-tags: [ "tauri","rust","工具" ]
+tags: [ "Tauri","Rust","工具" ]
 ---
 
 bilibili工具箱，视频/番剧+伴音/音乐下载，三种登录方式，仅用作学习用途。
