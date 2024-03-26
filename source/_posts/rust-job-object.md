@@ -10,7 +10,7 @@ Rust 下通过配置 Job Object 实现在主进程退出时自动清理创建的
 
 <!-- more -->
 
-之前写 Tauri 应用（没错就是[BiliTools](https://github.com/btjawa/bilitools)）时，需要在后台挂个 aria2c 实现多进程下载
+之前写 Tauri 应用（没错就是[BiliTools](https://github.com/btjawa/bilitools)）时，需要在后台挂个 aria2c 实现多线程下载
 
 然后发现很尴尬这玩意不会跟着应用退出而退出（理所当然）
 
