@@ -738,7 +738,7 @@ site_footer:
   layout: [aplayer, social, license, using, analytics, copyright]
   social:
     - icon: fa-duotone fa-rss
-      url: /atom.xml/
+      url: /atom.xml
     - icon: fa-brands fa-bilibili
       url: https://space.bilibili.com/524309471/
     - icon: fa-brands fa-qq
