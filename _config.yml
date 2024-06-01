@@ -112,8 +112,8 @@ feed:
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ''
+# deploy:
+#   type: ''
 
 import:
   head_begin:
