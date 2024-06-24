@@ -59,10 +59,11 @@ NTFS 那个分区所在的硬盘尽管是 PCIE 板载，但是因为 macOS 默�
 
 这里使用 `ntfs-3g`，每次开机运行一下就可以了（脚本调用 sudo，可能会让你输密码）
 
-使用前需要使用 `brew` 安装：
+使用前需要使用 `home-brew` 安装：
 
 ```sh
-brew install ntfs-3g
+brew tap gromgit/homebrew-fuse
+brew install ntfs-3g-mac
 ```
 
 {% folding open::ntfs.sh %}
