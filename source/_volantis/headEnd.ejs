@@ -45,3 +45,12 @@ td {
   background-image: url(/img/email-pattern-dark.png);
 }
 </style>
+<script>
+fetch("/img/home-icon.svg").then(async resp => {
+  const title = document.querySelector("div.top p.title");
+  title.innerHTML = await resp.text();
+  title.querySelectorAll('.letter').forEach(path => {
+    path.style.setProperty('--len', `${path.getTotalLength()}px`);
+  });
+})
+</script>
