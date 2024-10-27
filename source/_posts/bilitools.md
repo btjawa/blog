@@ -8,102 +8,173 @@ categories: [ "Tauri", "Rust" ]
 tags: [ "Tauri","Rust","工具" ]
 ---
 
-bilibili工具箱，视频/番剧+伴音/音乐下载，三种登录方式，仅用作学习用途。
+基于 [Tauri v2](https://v2.tauri.app) 实现的哔哩哔哩工具箱
+
+目前大致实现了资源下载：支持 `视频、番剧、课程、音乐` 下载， 自动刷新登录信息等等
+
+未来还会陆续支持更多功能，尽情期待~
 
 <!-- more -->
 
-![bilitools.png](https://cdn.jsdelivr.net/gh/btjawa/btjawa/assets/bilitools.png)
+{% note radiation red::在 `v1.3.0` 正式版发布后，低于 `v1.3.0` 的版本将会永久停止支持（EDL）！ %}
 
-{% link Github Repo::https://github.com/btjawa/bilitools::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
+以下内容基于 BiliTools v1.3.0-dev 撰写
 
-## 介绍
+## 设置
 
-基于 [Tauri](https://github.com/tauri-apps/tauri) & [Rust](https://github.com/rust-lang/rust) 实现的 bilibili 第三方轻量工具箱；项目仅作学习用途。
+{% tabs tab-id %}
 
-## 功能
+<!-- tab 存储 -->
 
-- 获取大会员/付费资源
-- 风控验证 - `WBI / _uuid / buvid3/4 / bili_ticket / 极验行为验证`
-- 多线程下载 / 断点续传 - `aria2`
-- 音视频下载 - `视频 / 合集 / 互动视频 / 课程 / 番剧 (AV + BV + SS + EP)`
-    - 画质最高支持：`8K + HDR + 杜比视界`
-    - 伴音音质最高支持：`192K + HiRes无损(48kHz) + 杜比全景声(384K)`
-    - 帧率最高支持：`120FPS`
-    - 编码支持：`AVC (H.264) + HEVC (H.265) + AV1`
-    - 互动视频支持：`回溯 / 控制剧情图 + 下载剧情分P`
-    - 支持 FLV 下载
-- 音乐下载 - `AU`
-    - 音质最高支持：`320K + 无损SQ FLAC`
-- 弹幕获取 - `XML+ASS: 实时弹幕 / 历史弹幕`
-- 视频AI总结
-- 三种登录方式 + 自动刷新登录状态
-    - 扫码登录
-    - 密码登录
-    - 短信登录: 多国家区号支持
+{% folding open blue::保存路径 %}
 
-## 更新
+点击左侧深色底的按钮可以更改路径，点击右侧粉色底的按钮可以使用资源管理器（macOS 下为访达）打开所配置的路径
 
-应用将在每次启动时自动检查并更新
+在下载文件时，应用的默认行为是：
 
-手动更新可移步 [Releases](https://github.com/btjawa/BiliTools/releases/latest)
+{% timeline %}
 
-## 感谢
+{% timenode 第 1/3 步 %}
 
-{% link 哔哩哔哩-API收集整理::https://github.com/SocialSisterYi/bilibili-API-collect::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
+使用 `aria2c` 从哔哩哔哩服务器开始接收数据，存储至 `未处理完成的文件` 目录
 
-{% link FFmpeg::https://github.com/FFmpeg/FFmpeg::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
 
-{% link aria2::https://github.com/aria2/aria2::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
+{% endtimenode %}
 
-{% link DanmakuFactory::https://github.com/hihkm/DanmakuFactory::https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/svgs/brands/github.svg %}
+{% timenode 第 2/3 步 %}
 
-## 文档
+如果选择了下载音视频，重复上一步继续下载音频/视频流，随后使用 `ffmpeg` 将音频流与视频流合并成一个完整的视频文件
 
-以下内容基于 <a href="https://github.com/btjawa/BiliTools/releases/tag/v1.1.2" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;BiliTools v1.1.2</a> 撰写。
+如果选择了仅下载音频/视频流或其它资源，等待下一步
 
-### 设置项
+{% endtimenode %}
 
-`存储目录` - 下载完成的资源将会存放至存储目录。
+{% timenode 第 3/3 步 %}
 
-`临时文件目录` - 下载中、未下载完成的资源将会存放至临时文件目录。一般情况下**不建议**修改。
+如果选择了下载音视频，将合并完成的文件转移至 `下载文件` 目录，并更名文件
 
-`最大并发下载数` - 最大并发下载数决定可以同时下载多少资源。更改将在重启应用或重启aria2c后生效。
+如果选择了仅下载音频/视频流或其它资源，将下载完成的原文件转移至 `下载文件` 目录，并更名文件
 
-{% note warning radiation ::
+{% endtimenode %}
 
-以下操作均会使 **下载中、未下载完成的资源进度丢失，需要重新下载。**
-<br>
-已下载完成的资源不受影响。仅建议在 **所有资源下载完成时** 操作。
+{% endtimeline %}
 
- %}
+在下载清晰度、音质等等质量较好的视频时，`未处理完成的文件` 目录可能会占用较多空间，可以考虑更改至其他磁盘（卷）
 
-`临时文件` - 清理临时文件不会影响**正常使用**。
+{% endfolding %}
 
-`aria2c相关` - 重启aria2c会使 **当前所有下载任务中断，且不可恢复。**
-仅建议在 **aria2c卡死、欲使最大并发下载数生效时** 重启。
+{% folding open blue::缓存 %}
 
-可以将重启前后 `aria2c` 的 `PID` 进行对比以确认是否重启成功。
+点击左侧深色底的按钮可以使用资源管理器（macOS 下为访达）打开所配置的路径，点击右侧粉色底的按钮可以清除该缓存
 
-## Q&A
+ - 日志
 
-### 为什么应用内登录后，B站后台显示 `设备/平台` 为 `Chrome浏览器` ?
+应用运行时所记录的日志，若遇到报错，可以在提交 Issue 时将该目录下的 `BiliTools.log` 作为附件上传
 
-应用会使用User-Agents `Chrome/120.0.0.0 ...` ，即模拟Chrome浏览器进行请求，风控率更低。
+ - 临时文件
 
-### 为什么下载资源的文件名会有一堆 `_` 而不是原视频名？
+即上文所提到的 `未处理完成的文件` 目录下的 `com.btjawa.bilitools` 目录 中的内容
 
-应用会将所有对于 `Windows 文件系统` 非法的字符替换为 `_` 下划线字符。
+下载完成后会自动清理临时文件，保留手动清理的选项是为了防止有漏网之鱼
 
-### 我需要通过代理服务器获取资源，如何配置？
+{% u 请确保在所有文件下载完毕后再进行清理！ %}
 
-目前应用核心(Tauri Core)并未提供相关网络接口，但在每次 `应用启动` 时，应用默认会尝试使用 `系统代理` 。
-    若发现未生效的话，可尝试使用代理软件的 `TUN 模式` 。
-  
-## 目前已知BUG
+- WebView
 
-1. 在批量下载时长较长的视频时（例如番剧），有一定概率出现 `aria2c RPC` 接口未响应的情况；
-目前尚未排查出出现原因，可临时通过小批量添加长视频下载任务来解决；
-在 `%TEMP%` 缓存尚未被清除的情况下，重启应用仍可保留尚未下载完成视频的进度。
+应用前端运行时产生的缓存
 
-2. 在更新队列时，有一定概率出现部分视频下载/合并进度无法更新的情况，表现为进度栏提示 `等待同步`；
-计划在未来重写进度以及队列更新的逻辑。
+ - 应用数据库
+
+即应用的数据库，包含登录信息、设置内容等等
+
+{% note radiation yellow::谨慎删除，删除该数据库等同于重置应用 %}
+
+{% endfolding %}
+
+<!-- endtab -->
+
+<!-- tab 下载 -->
+
+{% folding open blue::默认参数 %}
+
+在下载文件时，弹出选择参数的窗口时将会默认选择此处配置的参数
+
+若某资源没有此处配置的参数选项时，将会使用此资源最高可用的参数选项
+
+{% u 未来恢复批量下载的支持后，将也会使用此处的默认参数，所以保留了该配置 %}
+
+ - 下载并发数
+
+即 `aria2c` 下载资源时同时下载文件的数量
+
+{% endfolding %}
+
+{% folding open blue::网络代理 %}
+
+{% u 暂仅支持 `HTTP(S)` 协议 %}， 未来会尝试支持 `SOCKS` 协议
+
+代理地址的合法格式为 `http(s)://server:port`，可在 `地址` 输入框的下面两个输入框中配置用户名与密码
+
+更改完毕后，部分模块会立即生效，但还是建议重启应用以全局生效
+
+`Tauri核心` 默认会在启动时使用系统代理中配置的参数作为全局代理源，这一点目前还无法干预
+
+{% endfolding %}
+
+<!-- endtab -->
+
+<!-- tab 关于 -->
+
+{% folding open blue::更新 %}
+
+在此处可以配置更新行为，`自动检查` 开关可以配置每次启动应用时是否自动检测更新
+
+{% note info::不建议关闭，应用每次更新基本都会带来安全更新以及新功能 %}
+
+`检查更新` 按钮可以立即检查更新，与关闭、再打开 `自动检查` 开关的行为一致
+
+{% endfolding %}
+
+<!-- endtab -->
+
+{% endtabs %}
+
+## 下载相关
+
+### 关于 DASH / FLV / MP4
+
+*部分内容摘自 [哔哩哔哩-API收集整理](https://socialsisteryi.github.io/bilibili-API-collect/)*
+
+`DASH 格式` 为目前哔哩哔哩广泛使用的格式，可以获得全分辨率的流地址（参见）；但音频流与视频流是分开返回的，因此在下载音视频时需要多出一个 `ffmpeg 合并音视频` 的步骤
+
+`MP4 格式` 可以直接获得同时有音频流与视频流的 MP4 格式视频；但由于哔哩哔哩在2023年的更新，较高分辨率均更新为了 DASH 格式，较低分辨率与老视频还保留了 MP4, 这导致较新视频无法获取 MP4 格式的高分辨率视频
+
+`FLV 格式` 目前已下架，但 {% u 可能 %} 部分视频还可以获得此格式的资源
+
+{% link 关于引入DASH技术，提升用户播放体验的说明::https://www.bilibili.com/read/cv949156/::https://www.bilibili.com/favicon.ico %}
+
+## 登录相关
+
+当前的登录成功率为 扫码登录 > 短信登录 > 密码登录
+
+### 频繁触发风控
+
+因为哔哩哔哩官方没有提供API文档，相关请求的方法均为民间整理，所以有些请求可能鉴权参数不够，导致哔哩哔哩认为账号有风险
+
+这个问题无法彻底解决，尽量会在未来的更新中优化
+
+还有一种可能，在短期内大量请求接口导致风控（例如快速解析视频）
+
+短期内综合的解决方案有下面几种
+
+ - 在应用内退出登录，在浏览器（或哔哩哔哩客户端）中退出登录，并清除相关 Cookie 与缓存，稍等几分钟后重新登录
+ - 等待 ~15 分钟
+ - 尽量不要过快的做一些操作
+
+### 关于B站后台提示的 “未知设备” 与 “Chrome浏览器”
+
+登录过程实质是模拟 `Chrome浏览器` 的网页登录操作，哔哩哔哩会摘取请求的内容进行记录
+
+`User-Agent` 照搬 `Chrome浏览器` ，但 `buvid` 的获取没有完全稳定，因此就会出现题中问题了
+
+扫码登录由于成功率较大，在后台很大可能会看到 “Chrome浏览器”

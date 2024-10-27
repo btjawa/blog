@@ -1,5 +1,5 @@
 ---
-title: 记一次黑苹果崩溃 / Panic
+title: 记一次黑苹果崩溃
 date: "2024-03-23"
 author: btjawa
 comments: true
@@ -7,7 +7,7 @@ categories: [ "黑苹果" ]
 tags: [ "黑苹果", "工具" ]
 ---
 
-记一次黑苹果崩溃 / Panic - com.apple.filesystems.lifs
+记一次黑苹果崩溃 - com.apple.filesystems.lifs
 
 <!-- more -->
 
