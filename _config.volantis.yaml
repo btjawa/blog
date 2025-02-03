@@ -571,14 +571,10 @@ sidebar:
       social:
         - icon: fa-brands fa-bilibili
           url: https://space.bilibili.com/524309471/
-        - icon: fa-brands fa-qq
-          url: https://wpa.qq.com/msgrd?v=3&uin=2407356083&site=qq&menu=yes
         - icon: fa-brands fa-github
           url: https://github.com/btjawa/
         - icon: fa-brands fa-twitter
           url: https://twitter.com/BTJ_Shiroi
-        - icon: fa-brands fa-youtube
-          url: https://youtube.com/@BTJ_Shiroi
     # ---------------------------------------
     # toc widget (valid only in articles)
     toc:
@@ -723,14 +719,10 @@ site_footer:
       url: /atom.xml
     - icon: fa-brands fa-bilibili
       url: https://space.bilibili.com/524309471/
-    - icon: fa-brands fa-qq
-      url: https://wpa.qq.com/msgrd?v=3&uin=2407356083&site=qq&menu=yes
     - icon: fa-brands fa-github
       url: https://github.com/btjawa/
     - icon: fa-brands fa-twitter
       url: https://twitter.com/BTJ_Shiroi
-    - icon: fa-brands fa-youtube
-      url: https://youtube.com/@BTJ_Shiroi
   # site source
   source: https://github.com/btjawa/blog/tree/dev/
   # analytics using busuanzi
