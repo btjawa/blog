@@ -8,15 +8,11 @@ categories: [ "Tauri", "Rust" ]
 tags: [ "Tauri","Rust","工具" ]
 ---
 
-基于 [Tauri v2](https://v2.tauri.app) 实现的哔哩哔哩工具箱
-
-支持 `视频、番剧、课程、音乐、漫画` 等等资源下载与解析， 自动刷新登录信息等等
-
-未来还会陆续支持更多功能，尽情期待~
+基于 [Tauri v2](https://github.com/tauri-apps/tauri) 构建，支持下载解析哔哩哔哩各类资源，未来还会陆续支持更多功能
 
 <!-- more -->
 
-以下内容基于 BiliTools v1.3.2 撰写
+以下内容基于 BiliTools v1.3.3 撰写
 
 ## 设置
 
@@ -163,20 +159,6 @@ tags: [ "Tauri","Rust","工具" ]
 
 {% endfolding %}
 
-{% folding open blue::自定义配置 %}
-
-此处可以编辑 `aria2c` 与 `DanmakuFactory` 的配置，但要小心行事，一旦修改出错很有可能导致无法下载、获取弹幕
-
-`Windows` 下点击对应按钮可以弹出 `选择打开方式` 的弹窗或直接使用配置的软件打开，但其他 `Unix-like` 系统可能无法选择，可参考以下方式编辑
-
- - Macos
-
-右键应用点击 `查看包内容` 进入应用内部，随后进入 `Contents/Resources/resources`，其中就是配置文件
-
-***以后可能会修改配置文件的存放位置***
-
-{% endfolding %}
-
 <!-- endtab -->
 
 <!-- tab 关于 -->
@@ -211,22 +193,15 @@ tags: [ "Tauri","Rust","工具" ]
 
 ### 关于漫画
 
-目前已可解析到漫画的详情界面，但由于近期官方的一次更新导致所有图像被额外加密，因此暂时关闭下载入口，等待进一步的开发工作
+近期官方的一次更新导致所有图像被额外加密，因此暂时关闭下载入口，等待进一步的开发工作
 
-*应用现在的下载逻辑也可以下到数据，不过是被加密的图像，且容易被封号*
-
-*图像的加密方式被写在 `jsvmp` 里，这东西想要逆向有很大难度*
-
- - [SocialSisterYi/bilibili-API-collect#1168](https://github.com/SocialSisterYi/bilibili-API-collect/issues/1168)
- - [Nemo2011/bilibili-api#875](https://github.com/Nemo2011/bilibili-api/issues/875)
+之前这个项目支持调用 `Chrome` 模拟抓包漫画，但是因为一些大家都知道的原因，因此暂不更新漫画
 
 ## 登录相关
 
 当前的登录成功率为 扫码登录 > 短信登录 > 密码登录
 
-已知海外手机号无法登录
-
-*哔哩哔哩官网也无法用海外手机号登录，他们在APP端做了相关适配，但我没有能力去逆向APP端的登录逻辑*
+已知 `+1` 手机号无法登录，*哔哩哔哩官网也无法用  `+1` 手机号登录*
 
 ### 频繁触发风控
 
