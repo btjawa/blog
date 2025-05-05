@@ -1312,13 +1312,13 @@ custom_css:
     footnote: .78125rem
   fontfamily:
     logofont:
-      fontfamily: 'Comfortaa, HarmonyOS_Sans_SC_Regular, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
+      fontfamily: 'HarmonyOS_Regular, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       # name: 'VarelaRound'
       # url: volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf
       weight: normal
       style: normal
     bodyfont:
-      fontfamily: 'Comfortaa, HarmonyOS_Sans_SC_Regular, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
+      fontfamily: 'HarmonyOS_Regular, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       # name: 'UbuntuMono'
       # url: volantis-static/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
       weight: normal

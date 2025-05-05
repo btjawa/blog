@@ -128,9 +128,8 @@ import:
     - '<meta name="theme-color" content="#f4f4f4" media="(prefers-color-scheme: light)">'
     - '<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">'
   # Fonts
-    - <link href="https://fonts.googlefonts.cn/css?family=Comfortaa" rel="stylesheet">
     - <link href="https://fonts.googlefonts.cn/css?family=Source+Code+Pro" rel="stylesheet">
-    - <link href="/fonts/HarmonyOS_Sans_SC_Regular/font.min.css" rel="stylesheet">
+    - <link href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" rel="stylesheet">
   head_end:
   body_begin:
   body_end:
