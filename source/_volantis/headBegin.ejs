@@ -1,0 +1,55 @@
+<!-- Icons -->
+<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/img/favicon-64x64.png">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="Volantis">
+<meta name="application-name" content="Volantis">
+<meta name="msapplication-TileColor" content="#f4f4f4">
+<meta name="msapplication-TileImage" content="/img/favicon-32x32.png">
+<meta name="theme-color" content="#f4f4f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<!-- Font -->
+<link href="https://fonts.googlefonts.cn/css?family=Source+Code+Pro" rel="stylesheet">
+<link href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" rel="stylesheet">
+
+<!-- Custom body background -->
+<style>
+body {
+    background-image: url(/img/background-light.png);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([color-scheme]) body {
+        background-image: url(/img/background-dark.png);
+    }
+}
+
+@keyframes rightmenu-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        filter: none;
+        transform: translateY(0);
+    }
+}
+
+#rightmenu-wrapper {
+    transition: all .1s ease;
+}
+</style>
+
+<!-- Custom home title icon -->
+<script>
+fetch("/img/home-icon.svg").then(async resp => {
+    const title = document.querySelector("div.top p.title");
+    title.innerHTML = await resp.text();
+    title.querySelectorAll('.letter').forEach(path => {
+        path.style.setProperty('--len', `${path.getTotalLength()}px`);
+    });
+})
+</script>

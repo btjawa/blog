@@ -1,0 +1,12 @@
+diff --git a/node_modules/hexo-theme-volantis/source/js/plugins/rightMenus.js b/node_modules/hexo-theme-volantis/source/js/plugins/rightMenus.js
+index cdb9999..7e9fb78 100644
+--- a/node_modules/hexo-theme-volantis/source/js/plugins/rightMenus.js
++++ b/node_modules/hexo-theme-volantis/source/js/plugins/rightMenus.js
+@@ -178,6 +178,7 @@ RightMenus.fun = (() => {
+       let screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+       let screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+ 
++      _rightMenuWrapper.style.animation = 'rightmenu-in .2s cubic-bezier(.23,0,0,1.32)';
+       _rightMenuWrapper.style.display = 'block';
+       fn.menuControl(event);
+ 
