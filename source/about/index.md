@@ -39,4 +39,4 @@ Fork 主题，再略加修改后，就有了现在的这个博客
 
 ## 技术栈
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,rust,go,python,cpp,cs,nodejs,npm,vue,vite,electron,tauri,git,github,ps,pr,vscode,visualstudio)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,python,java,kotlin,rust,cpp,cs,nodejs,vue,vite,electron,tauri,git,github,ps,pr,vscode,visualstudio,ubuntu,apple)](https://skillicons.dev)
