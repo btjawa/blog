@@ -14,7 +14,7 @@
 <link href="https://fonts.googlefonts.cn/css?family=Source+Code+Pro" rel="stylesheet">
 <link href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" rel="stylesheet">
 
-<!-- Custom body background -->
+<!-- Custom Style -->
 <style>
 body {
     background-image: url(/img/background-light.png);
@@ -41,15 +41,18 @@ body {
 #rightmenu-wrapper {
     transition: all .1s ease;
 }
+
+div.top p.title svg {
+    height: 50px;
+    filter: drop-shadow(0px 0px 4px rgba(245,188,197,0.8));
+    color: var(--color-site-inner);
+    overflow: visible;
+}
 </style>
 
-<!-- Custom home title icon -->
 <script>
-fetch("/img/home-icon.svg").then(async resp => {
+fetch('/img/logo.svg').then(async resp => {
     const title = document.querySelector("div.top p.title");
     title.innerHTML = await resp.text();
-    title.querySelectorAll('.letter').forEach(path => {
-        path.style.setProperty('--len', `${path.getTotalLength()}px`);
-    });
 })
 </script>
