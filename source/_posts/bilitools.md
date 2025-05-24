@@ -14,11 +14,16 @@ tags: [ "Tauri","Rust","工具" ]
 
 项目地址：[GitHub](https://github.com/btjawa/BiliTools)
 
+国内用户最新版本的加速下载链接：
+ - [MacOS](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.3.7/BiliTools_1.3.7_universal.dmg)
+ - [Windows NSIS](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.3.7/BiliTools_1.3.7_x64-setup.exe)
+ - [Windows MSI](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.3.7/BiliTools_1.3.7_x64_zh-CN.msi)
+
 以下内容基于 [BiliTools v1.3.7](https://github.com/btjawa/BiliTools/releases/v1.3.7) 撰写
 
 **格式为 `a.b.c-d` （相比正式版本多了 `d` 这个数字）的版本为预发布版本，较不稳定，供尝鲜使用**
 
-**由于每个人网络环境不同，有一定概率检查更新报错或超时，因此请检查 [GitHub Release](https://github.com/btjawa/BiliTools/releases) 来确保获得最新更新**
+**由于每个人网络环境不同，检查更新可能报错或超时，因此请检查 [GitHub Release](https://github.com/btjawa/BiliTools/releases) 来确保获得最新更新**
 
 **大会员下载仅限本身开通了大会员服务的账号，普通账号无法解析付费、大会员内容**
 
@@ -249,9 +254,15 @@ tags: [ "Tauri","Rust","工具" ]
 
 当前的登录成功率为 扫码登录 > 短信登录 > 密码登录
 
-已知 `+1` 手机号无法登录，*哔哩哔哩官网也无法用  `+1` 手机号登录*
+已知 `+1` 手机号无法登录 *（哔哩哔哩官网也无法用  `+1` 手机号登录）*
 
-### 频繁触发风控
+应用所有请求都基于哔哩哔哩的 Web API，也就是模拟 Chrome 浏览器来请求哔哩哔哩
+
+登录过程也是如此，哔哩哔哩会分析请求的指纹来判断登录设备
+
+但毕竟是**模拟**浏览器，登录操作通知中出现 `未知设备` 也在所难免
+
+## 风控相关
 
 {% note::
 大部分被风控的情况一般都是请求过快、频繁切换IP或是IP质量不高导致的，一般用户其实很难遇到账号被风控的情况<br>
@@ -271,19 +282,13 @@ tags: [ "Tauri","Rust","工具" ]
  - 尽量不要过快的做一些操作
  - 等待 5~15 分钟
 
-### 关于B站后台提示的 “未知设备” 与 “Chrome浏览器”
+## Linux 支持
 
-登录过程实质是模拟 `Chrome浏览器` 的网页登录操作，哔哩哔哩会摘取请求的内容进行记录
+其实这个项目是有对 Linux 的各常见发行版的支持的（`src-tauri/tauri.linux.conf.json`）
 
-`User-Agent` 照搬 `Chrome浏览器` ，但 `buvid` 的获取没有完全稳定，因此就会出现题中问题了
+但是 AppImage 的打包配置比较麻烦，所以我就没有在 Release 里加 Linux 相关的包或者镜像
 
-扫码登录由于成功率较大，在后台很大可能会看到 “Chrome浏览器”
-
-## 其他
-
-`Linux` 用户建议 `clone` 项目后自行使用 `npm run tauri dev` 运行应用
-
-*其实是因为我没怎么摸透 AppImage 的打包方式*
+可以自行克隆项目，参考 [#开发 / 构建](https://github.com/btjawa/BiliTools?tab=readme-ov-file#%E5%BC%80%E5%8F%91--%E6%9E%84%E5%BB%BA) 使用
 
 ## 声明
 
