@@ -1,42 +1,84 @@
 ---
 seo_title: 关于
+bottom_meta: false
 sidebar: []
 ---
 
 ## よろしくね！
 
-本站是我的个人博客，也会将其作为我个人项目的文档站
+本站是我的个人博客，也会存放我一些项目的文档
 
 不定时分享一些自己的想法，或者一些技术文章
 
-## 本站发展
-
-我在 2021 年时有了自建网站的想法，靠着各种教程，使用 `Wordpress` 勉强搭建出了我的第一个博客
-当时我没有任何前后端的概念，只知道 `Wordpress` 需要后台和对接数据库管理，每次换服务器时都要备份很大一个 SQL 下来，实在是麻烦，也难管理
-
-后来多学了一点网络方面的知识，想了一下：
-
-- 小型博客不必像大型网站一样对接数据库
-- 使用其他框架构建静态页面后，再交给平台托管，甚至都不用额外租赁服务器
-
-于是，在 2023 年中旬，我找到了 `Hexo` 框架以及 `Volantis` 主题，足够好看，Markdown 也有更多扩展
-Fork 主题，再略加修改后，就有了现在的这个博客
-
-域名是在 `百度云` 购入的，由于是 `.top` 后缀，性价比很高
-页面由 `Vercel` 托管，再加上 [Vercel 加速](https://vercel-cyfan.yt-blog.top/9952/)，实现了我心目中的近乎零成本运营
-
 ## 个人介绍
 
-深圳初中生，正在学习日语
+深圳初中生
 
-初一时加入了学校的信息奥赛训练营，借此机会（兴趣）学习了网页三件套（`HTML` `CSS` `Javascript`），以及 `Vite` 等等前端框架
+目前的主力项目是 [BiliTools](https://github.com/btjawa/BiliTools)，觉得不错的话，欢迎点个 Star ！
+以后也会持续活跃于开源社区~
 
-之前用 `Electron` 写过一些东西，打包出来体积真是太大了，于是去寻找框架，找到了 `Tauri`，顺便学习了 `Rust`
+- Rust
 
-最近为了给我的苹果设备写一些东西，正在学 `Swift`
+[Tauri](https://tauri.app) 这个框架是基于 Rust 的，由于 [Electron](https://www.electronjs.org/) 体积过大，所以我选择了这个框架
+但是我并没有了解过 Rust，所以就 *被迫* 学了这个语言
+确实好用，我很喜欢她的编译器
 
-以后会继续在开源社区活跃，主力项目是 [BiliTools](https://github.com/btjawa/BiliTools)，如果觉得不错的话，也欢迎点个 Star ！
+- Skills ...?
 
-## 技术栈
+[![My Skills](https://skillicons.dev/icons?i=html,js,ts,python,java,kotlin,swift,rust,cpp,cs,nodejs,vue,vite,electron,tauri,git,github,ps,pr,vscode,visualstudio,arch,ubuntu,apple)](https://skillicons.dev)
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,python,java,kotlin,rust,cpp,cs,nodejs,vue,vite,electron,tauri,git,github,ps,pr,vscode,visualstudio,ubuntu,apple)](https://skillicons.dev)
+## 本站历程
+
+{% timeline %}
+
+{% timenode 2025-05-06 %}
+
+主题版本退回 `v5.8.0`，重新理了一遍配置文件
+
+{% endtimenode %}
+
+{% timenode 2024 下旬 %}
+
+用加速 Cloudflare 的思路，[对 Vercel 加速](https://vercel-cyfan.yt-blog.top/9952/)
+
+{% endtimenode %}
+
+{% timenode 2024-07-01 %}
+
+之前 GitHub Pages 在大陆的连接性问题，是用的 Cloudflare SaaS + [优选 IP](https://github.com/XIU2/CloudflareSpeedTest) 方案，不过太麻烦了
+因此迁移至 Vercel，相比前者也有更丰富的配置选项
+顺便给博客首页的标题加了 SVG 动画
+
+{% endtimenode %}
+
+{% timenode 2024-03-20 %}
+
+找到一个功能更完善同时好看的主题 [Volantis](https://volantis.js.org/)
+因此迁移至 [Hexo](https://hexo.io/zh-cn/)
+顺便给这个主题修了一些控件问题
+
+{% endtimenode %}
+
+{% timenode 2023-12-20 %}
+
+网上冲浪时看到一个网站挺好看的，主题是 [hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod)
+受此启发正式切换至 [Hugo](https://gohugo.io/) + [Github Pages](https://pages.github.com)
+
+{% endtimenode %}
+
+{% timenode 2023 中下旬 %}
+
+多学了一点知识，仔细想了一下
+- 我的博客其实不需要数据库，评论等等都可以托管在 GitHub
+- 静态构建相比 Wordpress 来说，不需要后端 (服务器)
+
+{% endtimenode %}
+
+{% timenode 2022-04-04 %}
+
+有了自建网站的想法
+租了第一台虚拟主机，靠着各路教程，用 [Wordpress](https://wordpress.org/download/) 搭建出了我的第一个博客
+
+{% endtimenode %}
+
+{% endtimeline %}
