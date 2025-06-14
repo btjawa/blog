@@ -14,13 +14,19 @@ sidebar: []
 
 深圳初中生
 
+*正在学习日语*
+
 目前的主力项目是 [BiliTools](https://github.com/btjawa/BiliTools)，觉得不错的话，欢迎点个 Star ！
 以后也会持续活跃于开源社区~
 
+- 域名
+
+是在百度云购入的，`.top` 后缀性价比很高
+
 - Rust
 
-[Tauri](https://tauri.app) 这个框架是基于 Rust 的，由于 [Electron](https://www.electronjs.org/) 体积过大，所以我选择了这个框架
-但是我并没有了解过 Rust，所以就 *被迫* 学了这个语言
+[Tauri v1](https://tauri.app) 是基于 Rust 的，由于 [Electron](https://www.electronjs.org/) 体积过大，所以我选择了前者
+但是我并没有了解过 Rust，所以 *被迫* 学了这个语言
 确实好用，我很喜欢她的编译器
 
 - Skills ...?
