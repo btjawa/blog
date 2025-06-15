@@ -2,7 +2,7 @@
 title: Rust 下实现自动清理子进程
 date: 2024-03-27 02:15:16
 author: btjawa
-categories: [ "Tauri", "Rust" ]
+categories: [ "Rust" ]
 tags: [ "Tauri","Rust" ]
 ---
 

@@ -4,7 +4,7 @@ date: "2024-01-12"
 author: btjawa
 comments: true
 pin: true
-categories: [ "Tauri", "Rust" ]
+categories: [ "工具" ]
 tags: [ "Tauri","Rust","工具" ]
 ---
 

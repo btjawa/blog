@@ -23,7 +23,7 @@ tags: [ "黑苹果", "工具" ]
 
 ## 解决过程
 
-{% image /img/2024/hackintosh-panic-lifs/panic.png::alt=报错信息 %}
+{% image /img/posts/hackintosh-panic-lifs/panic.png::alt=报错信息 %}
 
 从报错来看似乎和 `com.apple.filesystems.lifs(1.0)` 有关
 
