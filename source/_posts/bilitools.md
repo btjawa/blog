@@ -1,6 +1,7 @@
 ---
 title: BiliTools
 date: "2024-01-12"
+updated: "2025-06-16"
 author: btjawa
 comments: true
 pin: true

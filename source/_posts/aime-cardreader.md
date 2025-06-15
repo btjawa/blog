@@ -1,6 +1,7 @@
 ---
 title: 自制 Aime 读卡器
 date: "2025-06-02"
+updated: "2025-06-16"
 author: btjawa
 comments: true
 categories: [ "工具" ]
