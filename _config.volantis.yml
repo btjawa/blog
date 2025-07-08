@@ -345,7 +345,7 @@ comments:
     repo: btjawa/blog-comments
     repo-id: R_kgDOK7in7A
     category: General
-    category-id: DIC_kwDOK7in7M4Cb3QT
+    category-id: DIC_kwDOK7in7M4Cb3QU
     mapping: "pathname"
     strict: "0"
     reactions-enabled: "1"
