@@ -4,7 +4,6 @@ date: "2025-06-02"
 updated: "2025-06-16"
 author: btjawa
 comments: true
-categories: [ "工具" ]
 tags: [ "中二节奏", "ESP32", "工具" ]
 ---
 

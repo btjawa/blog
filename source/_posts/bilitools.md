@@ -5,7 +5,6 @@ updated: "2025-06-16"
 author: btjawa
 comments: true
 pin: true
-categories: [ "工具" ]
 tags: [ "Tauri","Rust","工具" ]
 ---
 
@@ -16,11 +15,11 @@ tags: [ "Tauri","Rust","工具" ]
 项目地址：[GitHub](https://github.com/btjawa/BiliTools)
 
 国内用户最新版本的加速下载链接：
- - [MacOS](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.3.7/BiliTools_1.3.7_universal.dmg)
- - [Windows NSIS](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.3.7/BiliTools_1.3.7_x64-setup.exe)
- - [Windows MSI](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.3.7/BiliTools_1.3.7_x64_zh-CN.msi)
+ - [MacOS](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.4.0/BiliTools_1.4.0_universal.dmg)
+ - [Windows NSIS](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.4.0/BiliTools_1.4.0_x64-setup.exe)
+ - [Windows MSI](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.4.0/BiliTools_1.4.0_x64_zh-CN.msi)
 
-以下内容基于 [BiliTools v1.3.7](https://github.com/btjawa/BiliTools/releases/v1.3.7) 撰写
+以下内容基于 [BiliTools v1.4.0](https://github.com/btjawa/BiliTools/releases/v1.4.0) 撰写
 
 **格式为 `a.b.c-d` （相比正式版本多了 `d` 这个数字）的版本为预发布版本，较不稳定，供尝鲜使用**
 
@@ -158,8 +157,6 @@ tags: [ "Tauri","Rust","工具" ]
 目前支持 封面、标题、简介、UP主、上传时间、TAGS
 
 ~*若需更加详细的元数据，请使用 `NFO`（在 `打包下载` 中，选中 `NFO`）*~
-
-*NFO 刮削数据当前版本 (v1.3.7) 尚未实现*
 
 {% endfolding %}
 
