@@ -23,3 +23,11 @@ volantis.rightmenu.handle(() => {
     next.title = articleNext ? articleNext.innerText : null;
 }, 'prevNext', false)
 </script>
+
+<script>
+// Vercel Analytics
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+document.addEventListener('pjax:complete', () => window.va('pageview'));
+</script>
+
+<script defer src="/_vercel/insights/script.js"></script>
