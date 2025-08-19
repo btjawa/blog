@@ -1,7 +1,7 @@
 ---
 title: BiliTools
 date: "2024-01-12"
-updated: "2025-06-16"
+updated: "2025-08-19"
 author: btjawa
 comments: true
 pin: true
@@ -14,18 +14,24 @@ tags: [ "Tauri","Rust","工具" ]
 
 项目地址：[GitHub](https://github.com/btjawa/BiliTools)
 
-国内用户最新版本的加速下载链接：
- - [MacOS](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.4.0/BiliTools_1.4.0_universal.dmg)
- - [Windows NSIS](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.4.0/BiliTools_1.4.0_x64-setup.exe)
- - [Windows MSI](https://ghproxy.net/https://github.com/btjawa/BiliTools/releases/download/v1.4.0/BiliTools_1.4.0_x64_zh-CN.msi)
-
-以下内容基于 [BiliTools v1.4.0](https://github.com/btjawa/BiliTools/releases/v1.4.0) 撰写
+**本项目只在 [Github Releases](https://github.com/btjawa/BiliTools/releases) 以及本文章处提供官方下载链接，不建议使用任何第三方平台提供的版本**
 
 **格式为 `a.b.c-d` （相比正式版本多了 `d` 这个数字）的版本为预发布版本，较不稳定，供尝鲜使用**
 
-**由于每个人网络环境不同，检查更新可能报错或超时，因此请检查 [GitHub Release](https://github.com/btjawa/BiliTools/releases) 来确保获得最新更新**
-
 **大会员下载仅限本身开通了大会员服务的账号，普通账号无法解析付费、大会员内容**
+
+**[关于声明请参见 README](https://github.com/btjawa/BiliTools?tab=readme-ov-file#%E5%A3%B0%E6%98%8E)**
+
+> 以下内容基于 [BiliTools **`v1.4.0-2`**](https://github.com/btjawa/BiliTools/releases/v1.4.0-2) 撰写
+
+## 安装注意事项
+
+对于 `Windows`，任选 `msi` 或 `exe` 都可以，更推荐后者（`NSIS`）
+
+对于 `macOS`，自 `1.4.0-2` 版本开始不再提供 universal 版本，因此：
+
+- Intel 芯片 请选择带有 `x64` 的 `dmg` 文件
+- M 系列芯片 / Apple Sillicon 请选择带有 `aarch64` 的 `dmg` 文件
 
 ## 设置
 
@@ -33,66 +39,75 @@ tags: [ "Tauri","Rust","工具" ]
 
 {% tabs settings %}
 
+<!-- tab 通用 -->
+
+{% folding open blue::监听剪贴板 %}
+
+*实验性功能*
+
+参见 [#70](https://github.com/btjawa/BiliTools/issues/70)
+
+{% endfolding %}
+
+{% folding open blue::通知系统 %}
+
+若启用，则会在下载完成时发送一条系统通知
+
+{% endfolding %}
+
+{% folding open blue::自动开始下载 %}
+
+若启用，则会在添加任务后自动开始下载
+
+**若禁用，请点击下载页面右侧的按钮开始下载**
+
+{% endfolding %}
+
+{% folding open blue::自动检查更新 %}
+
+除非你想固定该版本，否则请启用以确保可以获得最新的错误、安全性修复
+
+{% endfolding %}
+
+<!-- endtab -->
+
 <!-- tab 存储 -->
 
 {% folding open blue::保存路径 %}
 
-点击左侧的按钮可以更改路径，点击右侧的按钮可以使用资源管理器（下为访达）打开配置的路径
+点击显示路径的图标可以更改路径，点击蓝色的文件夹图标可以使用 资源管理器/访达 打开配置的路径
 
-下载文件的逻辑为：
+`临时文件` 目录会存储正在处理的文件，待处理完成后被转移到 `输出文件`
 
-{% timeline %}
-
-{% timenode 第 1/3 步 %}
-
-使用 `aria2c` 从哔哩哔哩服务器开始接收数据，存储至 `临时文件` 目录
-
-
-{% endtimenode %}
-
-{% timenode 第 2/3 步 %}
-
-如果选择下载 `音视频`，则会继续下载音频或视频，否则等待下一步
-
-{% endtimenode %}
-
-{% timenode 第 3/3 步 %}
-
-将 `临时文件夹` 中处理完成的文件转移至 `下载文件` 目录，并按 `设置 -> 高级 -> 命名格式` 配置的格式更名
-
-{% endtimenode %}
-
-{% endtimeline %}
-
-在下载清晰度、音质等等质量较好的视频时，`临时文件` 目录可能会占用较多空间，可以考虑更改至其他磁盘（卷）
+在下载清晰度、音质等等质量较好的视频时，`临时文件` 目录可能会占用较多空间，可以考虑更改路径
 
 {% endfolding %}
 
 {% folding open blue::缓存 %}
 
-点击左侧的按钮可以使用资源管理器（访达）打开配置的路径，点击右侧按钮可以清除该缓存
+点击显示该缓存大小 (MB) 的图标可以使用 资源管理器/访达 打开该缓存的目录，点击蓝色扫帚按钮可以清除该缓存
 
  - 日志
 
-应用运行时所记录的日志，若遇到报错，可以在提交 Issue 时将该目录下的 `BiliTools.log` 作为附件上传
+应用运行时所记录的日志，若遇到报错，请在提交 Issue 时将该目录下的 `BiliTools.log` 作为附件上传
 
  - 临时文件
 
-即上文所提到的 `临时文件` 目录下的 `com.btjawa.bilitools` 目录 中的内容
+即上文所提到的 `临时文件` 目录下的 `com.btjawa.bilitools` 目录中的内容
 
 下载完成后会自动清理临时文件，保留手动清理的选项是为了防止有漏网之鱼
 
-{% u 请确保在所有文件下载完毕后再进行清理！ %}
+{% note radiation yellow::请确保在所有下载任务处理完毕后再进行清理！%}
 
-- WebView
+ - WebView 缓存
 
-应用前端运行时产生的缓存，可能较大，可以不定期清理
+`Webview 运行时` 产生的缓存，可以定期清理
 
- - 应用数据库
+ - 数据库
 
 即应用的数据库，包含登录信息、设置内容等等
 
-{% note radiation yellow::**删除应用数据库等同于重置应用，丢失一切设置及下载记录**%}
+{% note radiation yellow::删除数据库等同于重置应用，丢失一切设置及下载记录%}
 
 {% endfolding %}
 
@@ -104,17 +119,23 @@ tags: [ "Tauri","Rust","工具" ]
 
 点击 `常规下载` 弹出的窗口中会使用此处的参数帮你提前选好所需的参数
 
-点击 `打包下载` 后，由于布局问题不便再提供参数选择区域，因此若选择了音频、视频、音视频，则会直接使用此处的参数下载
-
 若某资源没有此处配置的参数选项时，将会使用此资源最高可用的参数选项
 
 例：若此处配置了 `1080P 高清`，而资源最高只有 `720P 高清`，则会使用 `720P 高清` 下载
 
 {% note info blue::关于 `流媒体格式`，此处不提供设置，请查看 [#关于 DASH / FLV / MP4](#关于-DASH-FLV-MP4)%}
 
-- 同时下载数
-  - `aria2c` 下载资源时同时下载文件的数量
-  - 同时也决定多选下载节流机制 **每一轮** 添加多少任务
+{% endfolding %}
+
+{% folding open blue::为各个任务单独创建文件夹 %}
+
+若启用，则会在下载时为每个任务单独创建文件夹存放文件
+
+{% endfolding %}
+
+{% folding open blue::最大并发下载数 %}
+
+控制最大并发处理任务的数量。若该值较高，可能导致风控概率上升
 
 {% endfolding %}
 
@@ -132,67 +153,55 @@ tags: [ "Tauri","Rust","工具" ]
 
 <!-- tab 高级 -->
 
-{% folding open blue::优先使用 ProtoBuf 方式下载弹幕 %}
-
-哔哩哔哩目前提供两种接口来获取弹幕，一种为 `ProtoBuf` 协议格式，一种为 `XML` 格式
-
-只有 `实时弹幕` 依然可以使用 `XML` 格式，其他弹幕只可以通过 `ProtoBuf` 获得数据
-
-这两种格式的区别是
-- `XML` 在哔哩哔哩服务端就已经做好了相应的筛选，比较贴近实际观看时的弹幕数量
-- `ProtoBuf` 可以获得弹幕池中几乎所有弹幕，可以体验番剧弹幕密集到几乎看不见画面的效果
-
-个人建议只是下载弹幕搭配例如 `PotPlayer` 的播放器离线观看时，可以使用 `XML`（即将该配置选项关闭启用）
-
-若是备份弹幕、拍摄快照等等的话，可以使用 `Protobuf`（即将该配置选项打开启用）
-
-*在未来的某一天也许实时弹幕的XML也会被下架*
-
-{% endfolding %}
-
-{% folding open blue::添加媒体元数据 %}
+{% folding open blue::自动嵌入元数据 %}
 
 在下载完成后，使用 `ffmpeg` 为媒体资源添加元数据
 
 目前支持 封面、标题、简介、UP主、上传时间、TAGS
 
-~*若需更加详细的元数据，请使用 `NFO`（在 `打包下载` 中，选中 `NFO`）*~
+若需更加详细的元数据，请在下载时选中 `NFO 元数据` 中的对应刮削
+
+若遇到 `Failed to add metadata` 错误，请禁用该选项后重试
 
 {% endfolding %}
 
-{% folding open blue::命名格式 %}
+{% folding open blue::尝试屏蔽 PCDN %}
 
-`文件名格式` 对应下载的文件如何命名，`文件夹名格式` 对应下载自动创建的文件夹如何命名
+参见 [#77](https://github.com/btjawa/BiliTools/issues/77)
 
-点击对应变量的按钮即可向输入框中添加对应变量，若手动输入，请注意变量格式为 `{变量}`（两边大括号需闭合）否则变量不会生效
+若启用后下载缓慢甚至无法下载，请禁用该选项后重试
 
-建议在多个变量间添加分割符，例：`{index}_{title}_av{aid}_{bvid}_{ts_sec}`
+{% endfolding %}
 
-若某资源没有对应的变量（例如常规视频没有 `EP号` `SS号`），则会使用 `-1` 代替
+{% folding open blue::转换策略 %}
+
+- 将 XML 弹幕转换为 ASS 字幕
+  - 若启用，会使用 [DanmakuFactory](https://github.com/hihkm/DanmakuFactory) 将 XML 弹幕转换为可供播放器使用的 ASS 字幕格式
+  - 如果需要下载 XML，请禁用该选项
+
+- 将音频转换为 MP3 格式
+  - 若启用，会在下载音频（音视频不受影响）时将文件强制转换为 MP3格式
+  - 对于高音质文件，有损失部分音质的可能，因此在不需要 MP3 的情况下，请禁用此选项
 
 {% endfolding %}
 
 <!-- endtab -->
 
-<!-- tab 关于 -->
+<!-- tab 命名格式 -->
 
-{% folding open blue::更新 %}
+`文件名格式` 对应下载文件的命名格式，`文件夹名格式` 对应下载创建的文件夹的命名格式
 
-在此处可以配置更新行为，`自动检查` 开关可以配置每次启动应用时是否自动检测更新
+点击对应变量的按钮即可向输入框中添加对应变量，若手动输入，请注意变量格式为 `{变量}`（两边大括号需闭合）否则变量不会生效
 
-{% note info blue::不建议关闭，也许会错过某些重大BUG以及安全更新 %}
+若某资源没有对应的变量（例如常规视频没有 `EP号` `SS号`），则会使用 `-1` 
 
-`检查更新` 按钮可以立即检查更新
-
-{% endfolding %}
+对于 `/` `\` `:` `*` `?` `"` `<` `>` `|` 非法字符，会被一律替换为下划线（`_`）
 
 <!-- endtab -->
 
 {% endtabs %}
 
-## 下载相关
-
-### 关于 DASH / FLV / MP4
+## 关于 DASH / FLV / MP4
 
 *部分内容摘自 [哔哩哔哩-API收集整理](https://socialsisteryi.github.io/bilibili-API-collect/)*
 
@@ -244,7 +253,7 @@ tags: [ "Tauri","Rust","工具" ]
 
 {% endtabs %}
 
-### 关于漫画
+## 关于漫画
 
 [#1168](https://github.com/SocialSisterYi/bilibili-API-collect/issues/1168)
 
@@ -279,15 +288,3 @@ tags: [ "Tauri","Rust","工具" ]
  - 若是无法使用大会员，请查看哔哩哔哩客户端大会员页面，如果提示大会员权益已被限制可按照提示解除风控
  - 尽量不要过快的做一些操作
  - 等待 5~15 分钟
-
-## Linux 支持
-
-其实这个项目是有对 Linux 的各常见发行版的支持的（`src-tauri/tauri.linux.conf.json`）
-
-但是 AppImage 的打包配置比较麻烦，所以我就没有在 Release 里加 Linux 相关的包或者镜像
-
-可以自行克隆项目，参考 [#开发 / 构建](https://github.com/btjawa/BiliTools?tab=readme-ov-file#%E5%BC%80%E5%8F%91--%E6%9E%84%E5%BB%BA) 使用
-
-## 声明
-
-[参见 README](https://github.com/btjawa/BiliTools?tab=readme-ov-file#%E5%A3%B0%E6%98%8E)
