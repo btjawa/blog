@@ -12,9 +12,9 @@ tags: [ "Tauri","Rust","工具" ]
 
 <!-- more -->
 
-项目地址：[GitHub](https://github.com/btjawa/BiliTools)
+{% ghcard btjawa/BiliTools %}
 
-**本项目只在 [Github Releases](https://github.com/btjawa/BiliTools/releases) 以及本文章处提供官方下载链接，不建议使用任何第三方平台提供的版本**
+**本项目将只在 [Github Releases](https://github.com/btjawa/BiliTools/releases) 以及本文章处提供官方下载链接，不建议使用任何第三方平台提供的版本**
 
 **格式为 `a.b.c-d` （相比正式版本多了 `d` 这个数字）的版本为预发布版本，较不稳定，供尝鲜使用**
 
@@ -22,7 +22,7 @@ tags: [ "Tauri","Rust","工具" ]
 
 **[关于声明请参见 README](https://github.com/btjawa/BiliTools?tab=readme-ov-file#%E5%A3%B0%E6%98%8E)**
 
-> 以下内容基于 [BiliTools **`v1.4.0-2`**](https://github.com/btjawa/BiliTools/releases/v1.4.0-2) 撰写
+> 以下内容基于 [BiliTools **`v1.4.0-3`**](https://github.com/btjawa/BiliTools/releases/v1.4.0-3) 撰写
 
 ## 安装注意事项
 
@@ -32,6 +32,19 @@ tags: [ "Tauri","Rust","工具" ]
 
 - Intel 芯片 请选择带有 `x64` 的 `dmg` 文件
 - M 系列芯片 / Apple Sillicon 请选择带有 `aarch64` 的 `dmg` 文件
+
+你可能需要将该软件列入白名单，具体流程参见：[打开来自未知开发者的 Mac App](https://support.apple.com/zh-cn/guide/mac-help/mh40616/mac)
+
+如果无法在应用内添加任务，请尝试在终端使用该命令移除隔离：
+
+```zsh
+xattr -dr com.apple.quarantine /Applications/BiliTools.app
+```
+{% note info blue::
+目前已知在部分 `arm64` 平台的 macOS 上，有可能出现 `aria2c` 无权限或 JsonRPC 超时的问题<br>
+由于我们无法稳定复现这些问题，因此只能自行尝试关闭防火墙、移除隔离或是手动自签 `BiliTools.app`
+%}
+
 
 ## 设置
 
@@ -127,9 +140,11 @@ tags: [ "Tauri","Rust","工具" ]
 
 {% endfolding %}
 
-{% folding open blue::为各个任务单独创建文件夹 %}
+{% folding open blue::创建 “子文件夹” %}
 
-若启用，则会在下载时为每个任务单独创建文件夹存放文件
+若启用，则会在下载时为每个任务单独创建子文件夹存放文件，遵循 “子文件夹” 命名格式
+
+若禁用，则不再创建子文件夹，文件将平铺存储于 “顶层文件夹” 内
 
 {% endfolding %}
 
@@ -153,15 +168,11 @@ tags: [ "Tauri","Rust","工具" ]
 
 <!-- tab 高级 -->
 
-{% folding open blue::自动嵌入元数据 %}
+{% folding open blue::自动为音频文件嵌入元数据 %}
 
-在下载完成后，使用 `ffmpeg` 为媒体资源添加元数据
-
-目前支持 封面、标题、简介、UP主、上传时间、TAGS
+在下载完成后，使用 `ffmpeg` 为 **音频** 添加 **基本** 元数据
 
 若需更加详细的元数据，请在下载时选中 `NFO 元数据` 中的对应刮削
-
-若遇到 `Failed to add metadata` 错误，请禁用该选项后重试
 
 {% endfolding %}
 
@@ -189,11 +200,65 @@ tags: [ "Tauri","Rust","工具" ]
 
 <!-- tab 命名格式 -->
 
-`文件名格式` 对应下载文件的命名格式，`文件夹名格式` 对应下载创建的文件夹的命名格式
+时间格式参见 [时间格式](#时间格式)
+
+默认的文件夹结构为：
+
+```text
+输出目录
+└── 顶层文件夹
+    ├── poster.jpg
+    ├── tvshow.nfo
+    └── 子文件夹
+        ├── 刮削.nfo
+        ├── 弹幕.ass
+        ├── 弹幕.xml
+        ├── 视频.mp4
+        └── 文件名
+```
+
+此设置可自定义上述结构中对应节点的命名格式
+
+若在 `设置 -> 下载` 中禁用了 `创建 "子文件夹"`，则会将子文件中的内容平铺存放，不再创建子文件夹，效果如下：
+
+```text
+输出目录
+└── 顶层文件夹
+    ├── poster.jpg
+    ├── tvshow.nfo
+    ├── 刮削.nfo
+    ├── 弹幕.ass
+    ├── 弹幕.xml
+    ├── 视频.mp4
+    └── 文件名
+```
+
+若设置如下命名格式：
+
+- 顶层文件夹
+  - `{container} - {showtitle} ({downtime:YYYY-MM-DD_HH-mm-ss})`
+- 子文件夹
+  - `({index}) {mediaType} - {title}`
+- 文件名
+  - `{taskType} - {title}`
+
+效果如下：
+
+```text
+输出目录
+└── 收藏夹 - 标题 (2020-01-01_00-00-00)
+    ├── (1) 视频 - 标题
+    │   ├── 单集刮削 - 标题.nfo
+    │   ├── 实时弹幕 - 标题.ass
+    │   ├── 音视频 - 标题.mp4
+    │   └── 字幕 - 标题.zh-CN.xml
+    ├── (2) 番剧 - 标题
+    ...
+```
 
 点击对应变量的按钮即可向输入框中添加对应变量，若手动输入，请注意变量格式为 `{变量}`（两边大括号需闭合）否则变量不会生效
 
-若某资源没有对应的变量（例如常规视频没有 `EP号` `SS号`），则会使用 `-1` 
+若某资源没有对应的变量（例如视频没有 `EP号` `SS号`），该变量则会留空
 
 对于 `/` `\` `:` `*` `?` `"` `<` `>` `|` 非法字符，会被一律替换为下划线（`_`）
 
@@ -216,16 +281,21 @@ tags: [ "Tauri","Rust","工具" ]
 
 目前哔哩哔哩官方客户端中使用的串流方案，可以获得视频/音频源的最高质量版本
 
-由于此方案中视频、音频是**分开下发**的 ——
+由于此方案中视频、音频是**分开下发**的：
 
-- 下载时若选择 `下载音视频`，在最后阶段需要调用 ffmpeg 将音频与视频合并为一个完整的音视频
-- 下载时若选择 `下载视频` 或 `下载音频`，则会直接使用 ffmpeg 处理为标准音频或视频格式
+- 下载时若选择 `音视频`，在最后阶段需要调用 ffmpeg 将音频与视频合并为一个完整的音视频
+- 下载时若选择 `视频` 或 `音频`，则会直接使用 ffmpeg 处理为标准音频或视频格式
 
 {% link 关于引入DASH技术，提升用户播放体验的说明::https://www.bilibili.com/read/cv949156/::https://www.bilibili.com/favicon.ico %}
 
 <!-- endtab -->
 
 <!-- tab MP4 格式 -->
+
+{% note info blue::
+对于 **试看** 番剧、课程、视频等默认只有该格式可以下载<br>
+自 **v1.4.0-3** 版本开始，应用会自动尝试选择 `DASH` 或 `MP4`
+%}
 
 {% note warning yellow::
 此处介绍的是 **已不被官方支持** 的格式<br>
@@ -256,6 +326,29 @@ tags: [ "Tauri","Rust","工具" ]
 ## 关于漫画
 
 [#1168](https://github.com/SocialSisterYi/bilibili-API-collect/issues/1168)
+
+由于様々大家都知道的问题，不再考虑支持漫画下载
+
+## 时间格式
+
+`设置 -> 命名格式` 中的 `{pubtime}` `{downtime}` 变量支持自定义时间格式
+
+目前提供两种格式化方式：
+
+- `{var:<ISO8601>}`
+  - 格式需遵循 [ISO8601](https://www.wikiwand.com/en/articles/ISO_8601) 标准
+
+- `{var:ts}`
+  - 返回秒级 UNIX 时间戳
+
+| 常见格式 | 预览 |
+|---------|------|
+| `{downtime:YYYY-MM-DD_HH-mm-ss}` | 2020-01-01_00-00-00 |
+| `{downtime:YYYY年MM月DD日}` | 2020年01月01日 |
+| `{downtime:YYYY-MM-DD}` | 2020-01-01 |
+| `{downtime:HH:mm:ss}` | 00:00:00 |
+| `{downtime:ts}` | 1577836800 |
+
 
 ## 登录相关
 
