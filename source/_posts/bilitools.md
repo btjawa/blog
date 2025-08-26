@@ -1,7 +1,7 @@
 ---
 title: BiliTools
 date: "2024-01-12"
-updated: "2025-08-19"
+updated: "2025-08-26"
 author: btjawa
 comments: true
 pin: true
@@ -14,6 +14,16 @@ tags: [ "Tauri","Rust","工具" ]
 
 {% ghcard btjawa/BiliTools %}
 
+{% note link red::
+**本文章内容正逐步迁移至 [文档站](https://docs.btjawa.top)<br>
+[设置](https://docs.btjawa.top/help/windows.html)<br>
+[常见问题](https://docs.btjawa.top/guide/settings.html)<br>
+[时间格式](https://docs.btjawa.top/guide/settings.html#时间格式)<br>
+[关于 DASH / MP4 / FLV](https://docs.btjawa.top/guide/stream.html)<br>
+<br>
+以下内容仅作存档**
+%}
+
 **本项目将只在 [Github Releases](https://github.com/btjawa/BiliTools/releases) 以及本文章处提供官方下载链接，不建议使用任何第三方平台提供的版本**
 
 **格式为 `a.b.c-d` （相比正式版本多了 `d` 这个数字）的版本为预发布版本，较不稳定，供尝鲜使用**
@@ -22,7 +32,7 @@ tags: [ "Tauri","Rust","工具" ]
 
 **[关于声明请参见 README](https://github.com/btjawa/BiliTools?tab=readme-ov-file#%E5%A3%B0%E6%98%8E)**
 
-> 以下内容基于 [BiliTools **`v1.4.0-3`**](https://github.com/btjawa/BiliTools/releases/v1.4.0-3) 撰写
+> 以下内容基于 [BiliTools **`v1.4.0-5`**](https://github.com/btjawa/BiliTools/releases/v1.4.0-5) 撰写
 
 ## 安装注意事项
 
