@@ -15,11 +15,11 @@ tags: [ "Tauri","Rust","工具" ]
 {% ghcard btjawa/BiliTools %}
 
 {% note link red::
-**本文章内容正逐步迁移至 [文档站](https://docs.btjawa.top)<br>
-[设置](https://docs.btjawa.top/help/windows.html)<br>
-[常见问题](https://docs.btjawa.top/guide/settings.html)<br>
-[时间格式](https://docs.btjawa.top/guide/settings.html#时间格式)<br>
-[关于 DASH / MP4 / FLV](https://docs.btjawa.top/guide/stream.html)<br>
+**本文章内容正逐步迁移至 [文档站](https://bilitools.btjawa.top)<br>
+[设置](https://bilitools.btjawa.top/help/windows.html)<br>
+[常见问题](https://bilitools.btjawa.top/guide/settings.html)<br>
+[时间格式](https://bilitools.btjawa.top/guide/settings.html#时间格式)<br>
+[关于 DASH / MP4 / FLV](https://bilitools.btjawa.top/guide/stream.html)<br>
 <br>
 以下内容仅作存档**
 %}

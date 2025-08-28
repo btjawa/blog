@@ -1,1 +1,0 @@
-<script>window.location.href="/posts/bilitools"</script>
