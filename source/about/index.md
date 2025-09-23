@@ -31,7 +31,7 @@ sidebar: []
 
 - Skills ...?
 
-[![My Skills](https://skillicons.dev/icons?i=html,js,ts,python,java,kotlin,swift,rust,cpp,cs,nodejs,vue,vite,electron,tauri,git,github,ps,pr,vscode,visualstudio,arch,ubuntu,apple)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,python,java,kotlin,rust,cpp,cs,nodejs,vue,vite,electron,tauri,git,github,ps,pr,idea,vscode,visualstudio,raspberrypi,arduino,docker,mysql,mongodb,sqlite,linux,apple)](https://skillicons.dev)
 
 ## 本站历程
 
