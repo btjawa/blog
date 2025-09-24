@@ -70,21 +70,17 @@ tags: [ "Tauri","Rust","工具" ]
 
 ## ✨ 新版本特性
 
-### [1.4.1] - 2025-09-23
+### [1.4.3] - 2025-09-24
 
 ### 新增功能
 
-- [`51bb916`](https://github.com/btjawa/BiliTools/commit/51bb916af5262d041e73cfc85beb9d822a5f1729) 支持解析用户投稿视频 ([#175](https://github.com/btjawa/BiliTools/issues/175))
-- [`1b5abe8`](https://github.com/btjawa/BiliTools/commit/1b5abe82838d857debba8b73fe7dc4b04ce57a38) 支持解析用户投稿音频 ([#175](https://github.com/btjawa/BiliTools/issues/175))
-- [`3816ecf`](https://github.com/btjawa/BiliTools/commit/3816ecf5859e6bc30dab4577185c8eb832a47d62) 支持为音频文件嵌入封面 ([#161](https://github.com/btjawa/BiliTools/issues/161))
-- [`84a5209`](https://github.com/btjawa/BiliTools/commit/84a520985464f381c4aa08efb025011e5bc971a0) [`2d2ac88`](https://github.com/btjawa/BiliTools/commit/82d2ac88358fcb092ed4a1457d3765e36ffecbae) 支持重试任务 ([#174](https://github.com/btjawa/BiliTools/issues/174), [#179](https://github.com/btjawa/BiliTools/issues/179))
-- [`1f5abc7`](https://github.com/btjawa/BiliTools/commit/1f5abc75c6eeceffad54a237a545f96456a9bfa8) [`6ab9129`](https://github.com/btjawa/BiliTools/commit/6ab91298b5acfbdcabc2dda4f73eb8655711fa46) 支持解析用户投稿图文 & 动态 & 专栏 ([#175](https://github.com/btjawa/BiliTools/issues/175))
+- [`efc3ed6`](https://github.com/btjawa/BiliTools/commit/efc3ed670ead3821b6861709a7c01b2451d5539c) 支持拖拽并自动搜索哔哩哔哩链接 ([#183](https://github.com/btjawa/BiliTools/issues/183))
+- [`b5a760f`](https://github.com/btjawa/BiliTools/commit/b5a760fb8ce05e06283b5c4bc4b06e9d534815c4) 支持解析用户完整投稿视频列表
 
 ### 问题修复
 
-- [`588819b`](https://github.com/btjawa/BiliTools/commit/588819b3b5fa2766f78e49e94eefb57573965c6e) 修复 `dash.audio` 不可遍历的问题 ([#176](https://github.com/btjawa/BiliTools/issues/176))
-- [`588819b`](https://github.com/btjawa/BiliTools/commit/588819b3b5fa2766f78e49e94eefb57573965c6e) 修复 Debian 平台依赖过时的问题 ([#177](https://github.com/btjawa/BiliTools/issues/177))
-- [`588819b`](https://github.com/btjawa/BiliTools/commit/588819b3b5fa2766f78e49e94eefb57573965c6e) 修复互动视频剧情图分支错误的问题 ([#178](https://github.com/btjawa/BiliTools/issues/178))
+- [`d8b09fb`](https://github.com/btjawa/BiliTools/commit/d8b09fb5733ea0c15285dc8ea12e68bd55ffe42c) 修复数据库迁移与 `staff` 解析不完整的问题 ([#182](https://github.com/btjawa/BiliTools/issues/182))
+- [`78b5f06`](https://github.com/btjawa/BiliTools/commit/78b5f06088f13150f753f7b23055fc4293887b6f) 修复 Linux 下 Sidecar 的打包策略问题 ([#182](https://github.com/btjawa/BiliTools/issues/182))
 
 ## 💫 鸣谢
 
