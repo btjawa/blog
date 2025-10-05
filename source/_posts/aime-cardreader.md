@@ -19,7 +19,7 @@ tags: [ "中二节奏", "ESP32", "工具" ]
 
 固件已开源
 
-{% link btjawa/esp32c3-supermini-cardreader::https://github.com/btjawa/esp32c3-supermini-cardreader::https://github.com/fluidicon.png %}
+{% link btjawa/ESP32-CardReader::https://github.com/btjawa/ESP32-CardReader::https://github.com/fluidicon.png %}
 
 ## 硬件
 
@@ -54,7 +54,7 @@ PCB 新版全部用了贴片，之前做的的全是插件，PCB 背面不太美
 
 ## 软件
 
-**具体实现可以查看 [src/sega.cpp](https://github.com/btjawa/esp32c3-supermini-cardreader/blob/main/src/sega.cpp)，这里只大致讲讲处理的逻辑**
+**具体实现可以查看 [src/sega.cpp](https://github.com/btjawa/ESP32-CardReader/blob/main/src/sega.cpp)，这里只大致讲讲处理的逻辑**
 
 用 `PlatformIO` + `arduino` framework
 由于 ESP32C3 Supermini 没有串口转USB以及自动下载电路
@@ -88,7 +88,7 @@ PCB 新版全部用了贴片，之前做的的全是插件，PCB 背面不太美
 
 ### 处理 CMD
 
-CMD 字节就是这个指令的类型，映射表可以查看 [src/sega.h](https://github.com/btjawa/esp32c3-supermini-cardreader/blob/main/src/sega.h)
+CMD 字节就是这个指令的类型，映射表可以查看 [src/sega.h](https://github.com/btjawa/ESP32-CardReader/blob/main/src/sega.h)
 
 `...?` 即代表不确定
 
