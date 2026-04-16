@@ -407,10 +407,10 @@ comments:
   # https://github.com/laymonage/giscus
   giscus:
     # 以下配置按照 yml 格式增删填写即可
-    repo: btjawa/blog-comments
-    repo-id: R_kgDOK7in7A
+    repo: btjawa/blog
+    repo-id: R_kgDOK77Suw
     category: General
-    category-id: DIC_kwDOK7in7M4Cb3QU
+    category-id: DIC_kwDOK77Su84C69lm
     mapping: "pathname"
     strict: "0"
     reactions-enabled: "1"
