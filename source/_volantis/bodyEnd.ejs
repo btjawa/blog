@@ -1,0 +1,31 @@
+<style>
+@keyframes path-draw {
+  to {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+#l_cover p.title svg {
+  height: 50px;
+}
+
+#l_cover .title svg path {
+  color: var(--color-site-inner);
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  fill-opacity: 0;
+  animation: path-draw 2s ease-in-out forwards;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+</style>
+
+<script>
+const title = document.querySelector('#l_cover p.title');
+if (title) fetch('/img/Banner.svg')
+  .then((resp) => resp.text())
+  .then((banner) => title.innerHTML = banner)
+  .catch(console.error);
+</script>
+
+<script defer src="/_vercel/insights/script.js"></script>
